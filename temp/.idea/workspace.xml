@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="50cebe8c-aa1f-4a41-bdd1-7c55756bead4" name="默认更改列表" comment="">
+      <change beforePath="$PROJECT_DIR$/lib/LOSetting/Language/LOLanguageUntil.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LOSetting/Language/LOLanguageUntil.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LOSetting/Language/LOSetLanguage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LOSetting/Language/LOSetLanguage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/intl/messages_en.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/intl/messages_en.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/intl/messages_zh_CN.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/intl/messages_zh_CN.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/l10n.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/l10n.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/l10n/intl_en.arb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/intl_en.arb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/l10n/intl_zh_CN.arb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/intl_zh_CN.arb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1n0K8YHaGT0sjxLwhQjm3hxFXYl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="dart.analysis.tool.window.force.activate" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="50cebe8c-aa1f-4a41-bdd1-7c55756bead4" name="默认更改列表" comment="" />
+      <created>1610521408260</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610521408260</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1116" y="18" key="SettingsEditor" timestamp="1610523930964">
+      <screen x="-1920" y="-107" width="1920" height="1055" />
+    </state>
+    <state x="-1116" y="18" key="SettingsEditor/0.25.1280.775/-1920.-107.1920.1055@-1920.-107.1920.1055" timestamp="1610523930964" />
+    <state x="-884" y="-5" width="615" height="735" key="find.popup" timestamp="1610524055420">
+      <screen x="-1920" y="-107" width="1920" height="1055" />
+    </state>
+    <state x="-884" y="-5" width="615" height="735" key="find.popup/0.25.1280.775/-1920.-107.1920.1055@-1920.-107.1920.1055" timestamp="1610524055420" />
+  </component>
+</project>
