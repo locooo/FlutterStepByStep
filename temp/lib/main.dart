@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:math';
 
 import 'package:fluro/fluro.dart';
@@ -11,6 +12,7 @@ import 'package:temp/LOSetting/lo_settingPage.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:temp/generated/l10n.dart';
 import 'package:temp/untils/routers/application.dart';
+import 'package:temp/untils/routers/navigatorUntil.dart';
 
 import 'untils/routers/routes.dart';
 
@@ -103,12 +105,9 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         // onPressed: _incrementCounter,
         onPressed: () {
-          // Provider.of<LOThemeUntil>(context, listen: false)
-          //     .setTheme(Random().nextInt(6));
-          // Navigator.push(context,
-          //     new MaterialPageRoute(builder: (context) => new LOSetTheme()));
-          Navigator.push(context,
-              new MaterialPageRoute(builder: (context) => new LOSettingPage()));
+          Map pass = {'ee': 'ee'};
+          NavigatorUntil.push(context, "/lo_settingPage",
+              params: {"title": "设置", "other": JsonEncoder().convert(pass)});
         },
         tooltip: 'Increment',
         child: Text("Add"),
