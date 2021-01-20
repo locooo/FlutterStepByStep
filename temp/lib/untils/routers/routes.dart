@@ -27,6 +27,9 @@ class Routes {
   static String testAlignPage = "/lo_TestAlignPage";
 
   static String testPaddingPage = "/lo_TestPaddingPage";
+  static String testBoxsPage = "/lo_TestBoxsPage";
+  static String testDecoratedBoxPage = "/lo_TestDecoratedBoxPage";
+  static String testTransformPage = "/lo_TestTransformPage";
 
   static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = Handler(
@@ -61,5 +64,8 @@ class Routes {
     router.define(testAlignPage, handler: testAlignPageHandel);
     //Widget_Container
     router.define(testPaddingPage, handler: testPaddingPageHandel);
+    router.define(testBoxsPage, handler: testBoxsPageHandel);
+    router.define(testDecoratedBoxPage, handler: testDecoratedBoxPageHandel);
+    router.define(testTransformPage, handler: testTransformPageHandel);
   }
 }

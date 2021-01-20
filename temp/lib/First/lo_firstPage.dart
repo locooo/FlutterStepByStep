@@ -30,8 +30,12 @@ class _LOFirstPageState extends State<LOFirstPage> {
 
   List two = [
     LOFirstPageModel(icon: Icons.inventory, name: "Widgets_Container(容器类组件)"),
-    LOFirstPageModel(icon: Icons.ac_unit, name: "Padding(填充)"),
-    // LOFirstPageModel(icon: Icons.ac_unit, name: "Row(线性布局)"),
+    LOFirstPageModel(icon: Icons.ac_unit, name: "Padding(填充留白)"),
+    LOFirstPageModel(
+        icon: Icons.ac_unit, name: "ConstrainedBox_UnconstrainedBox(尺寸限制类容器)"),
+    LOFirstPageModel(icon: Icons.ac_unit, name: "DectoratedBox(装饰容器)"),
+    LOFirstPageModel(icon: Icons.ac_unit, name: "Container(容器)"),
+    LOFirstPageModel(icon: Icons.ac_unit, name: "Container(容器)"),
     // LOFirstPageModel(icon: Icons.ac_unit, name: "Column(线性布局)"),
     // LOFirstPageModel(icon: Icons.ac_unit, name: "FlexAndExpanded(弹性布局)"),
     // LOFirstPageModel(icon: Icons.ac_unit, name: "WrapAndFlow(流式布局)"),
@@ -41,7 +45,6 @@ class _LOFirstPageState extends State<LOFirstPage> {
 
   List three = [
     LOFirstPageModel(icon: Icons.dashboard, name: "Layouts(布局类组件)"),
-    LOFirstPageModel(icon: Icons.ac_unit, name: "Container"),
     LOFirstPageModel(icon: Icons.ac_unit, name: "Row(线性布局)"),
     LOFirstPageModel(icon: Icons.ac_unit, name: "Column(线性布局)"),
     LOFirstPageModel(icon: Icons.ac_unit, name: "FlexAndExpanded(弹性布局)"),
@@ -97,17 +100,18 @@ class _LOFirstPageState extends State<LOFirstPage> {
                   NavigatorUntil.push(context, Routes.testPaddingPage);
                   break;
                 case 1:
-                  NavigatorUntil.push(context, Routes.testRowAndColumnPage);
+                  NavigatorUntil.push(context, Routes.testBoxsPage);
 
                   break;
                 case 2:
-                  NavigatorUntil.push(context, Routes.testRowAndColumnPage1);
+                  NavigatorUntil.push(context, Routes.testDecoratedBoxPage);
                   break;
                 case 3:
-                  NavigatorUntil.push(context, Routes.testFlexAndExpandedPage);
+                  NavigatorUntil.push(context, Routes.testContainerPage);
+
                   break;
                 case 4:
-                  NavigatorUntil.push(context, Routes.testWrapAndFlowPage);
+                  NavigatorUntil.push(context, Routes.testTransformPage);
                   break;
                 case 5:
                   NavigatorUntil.push(
@@ -126,26 +130,23 @@ class _LOFirstPageState extends State<LOFirstPage> {
             onTap: (int index) {
               switch (index) {
                 case 0:
-                  NavigatorUntil.push(context, Routes.testContainerPage);
-                  break;
-                case 1:
                   NavigatorUntil.push(context, Routes.testRowAndColumnPage);
 
                   break;
-                case 2:
+                case 1:
                   NavigatorUntil.push(context, Routes.testRowAndColumnPage1);
                   break;
-                case 3:
+                case 2:
                   NavigatorUntil.push(context, Routes.testFlexAndExpandedPage);
                   break;
-                case 4:
+                case 3:
                   NavigatorUntil.push(context, Routes.testWrapAndFlowPage);
                   break;
-                case 5:
+                case 4:
                   NavigatorUntil.push(
                       context, Routes.testStackAndPositionedPage);
                   break;
-                case 6:
+                case 5:
                   NavigatorUntil.push(context, Routes.testAlignPage);
                   break;
 

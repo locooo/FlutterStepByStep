@@ -4,7 +4,6 @@ import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:temp/Drawer/lo_drawerPage.dart';
 import 'package:temp/First/Layouts/lo_AlignPage.dart';
-import 'package:temp/First/Layouts/lo_ContainerPage.dart';
 import 'package:temp/First/Layouts/lo_FlexAndExpanded.dart';
 import 'package:temp/First/Layouts/lo_RowAndColumnPage.dart';
 import 'package:temp/First/Layouts/lo_RowAndColumnPage1.dart';
@@ -18,7 +17,11 @@ import 'package:temp/First/Widgets_Basis/lo_InkWellPage.dart';
 import 'package:temp/First/Widgets_Basis/lo_SwitchAndCheckBox.dart';
 import 'package:temp/First/Widgets_Basis/lo_TextPage.dart';
 import 'package:temp/First/Widgets_Basis/lo_testField.dart';
+import 'package:temp/First/Widgets_Container/lo_BoxsPage.dart';
+import 'package:temp/First/Widgets_Container/lo_ContainerPage.dart';
+import 'package:temp/First/Widgets_Container/lo_DecoratedBoxPage.dart';
 import 'package:temp/First/Widgets_Container/lo_PaddingPage.dart';
+import 'package:temp/First/Widgets_Container/lo_TransformPage.dart';
 import 'package:temp/LOSetting/Language/LOSetLanguage.dart';
 import 'package:temp/LOSetting/Theme/LOSetTheme.dart';
 import 'package:temp/LOSetting/lo_settingPage.dart';
@@ -100,6 +103,19 @@ var testInkWellPageHandel = Handler(
 var testPaddingPageHandel = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   return LOPaddingPage();
+});
+var testBoxsPageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOBoxsPage();
+});
+var testDecoratedBoxPageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LODecoratedBoxPage();
+});
+
+var testTransformPageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOTransformPage();
 });
 
 ///MARK:Layouts
