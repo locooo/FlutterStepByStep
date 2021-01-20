@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:temp/LOSetting/Theme/LOThemeSelected.dart';
 import 'package:temp/LOSetting/Theme/LOThemeUntil.dart';
+import 'package:temp/generated/l10n.dart';
 
 class LOSetTheme extends StatefulWidget {
   LOSetTheme({Key key}) : super(key: key);
@@ -17,7 +18,7 @@ class _LOSetThemeState extends State<LOSetTheme> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("设置主题"),
+        title: Text(S.of(context).setLanguage),
       ),
       body: Container(
         decoration: new BoxDecoration(

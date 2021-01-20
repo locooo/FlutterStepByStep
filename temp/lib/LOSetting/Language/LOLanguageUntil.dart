@@ -24,7 +24,7 @@ class LOLanguageUntil extends ChangeNotifier {
   }
 
   Locale get toGetCurrentLanguage {
-    if (_languageIndex == null || _languageIndex == 0) {
+    if (this.languageIndex == null || this.languageIndex == 0) {
       return null;
     } else {
       switch (_languageIndex) {

@@ -5,16 +5,20 @@ import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sp_util/sp_util.dart';
+import 'package:temp/Drawer/lo_drawerPage.dart';
+import 'package:temp/First/lo_firstPage.dart';
 import 'package:temp/LOSetting/Language/LOLanguageUntil.dart';
 import 'package:temp/LOSetting/Theme/LOSetTheme.dart';
 import 'package:temp/LOSetting/Theme/LOThemeUntil.dart';
 import 'package:temp/LOSetting/lo_settingPage.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:temp/Second/lo_secondPage.dart';
 import 'package:temp/generated/l10n.dart';
 import 'package:temp/untils/routers/application.dart';
 import 'package:temp/untils/routers/navigatorUntil.dart';
 
 import 'untils/routers/routes.dart';
+import 'package:get/get.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -52,12 +56,14 @@ class MyApp extends StatelessWidget {
             ],
             supportedLocales: S.delegate.supportedLocales,
             localeListResolutionCallback: (locales, supportedLocales) {
-              print(locales);
+              debugPrint("语言 $locales");
               return;
             },
             locale: languageUntil.toGetCurrentLanguage,
             // home: MyHomePage(title: "qwqewqewqe"),
             onGenerateRoute: Application.router.generator,
+            navigatorKey:
+                Get.key, //Get.key.currentState.overlay.context可以全局获取当前context
           );
         },
       ),
@@ -74,13 +80,67 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+  int selectedIndex = 0;
+  final pages = [LOFirstPage(), LOSecondPage(), LOSecondPage(), LOSecondPage()];
+  final pagesText = ['Basics', '用印', '印章', '我的'];
+  final List<BottomNavigationBarItem> bottomNavItems = [
+    BottomNavigationBarItem(
+      backgroundColor: Colors.black,
+      icon: Icon(
+        Icons.home,
+        color: Colors.white,
+        size: 40,
+      ),
+      activeIcon: Icon(
+        Icons.home,
+        color: Colors.white,
+        size: 40,
+      ),
+      // ignore: deprecated_member_use
+      title: Text('Basics'),
+    ),
+    BottomNavigationBarItem(
+      backgroundColor: Colors.black,
+      icon: Icon(
+        Icons.spa,
+        color: Colors.white,
+        size: 40,
+      ),
+      activeIcon: Icon(
+        Icons.spa,
+        color: Colors.white,
+        size: 40,
+      ),
+      // ignore: deprecated_member_use
+      title: Text("2"),
+    ),
+    BottomNavigationBarItem(
+      backgroundColor: Colors.black,
+      icon: Icon(
+        Icons.spa,
+        color: Colors.white,
+        size: 40,
+      ),
+      activeIcon: Icon(Icons.spa, color: Colors.white, size: 40),
+      // ignore: deprecated_member_use
+      title: Text("3"),
+    ),
+    BottomNavigationBarItem(
+      backgroundColor: Colors.black,
+      icon: Icon(
+        Icons.spa,
+        color: Colors.white,
+        size: 40,
+      ),
+      activeIcon: Icon(
+        Icons.spa,
+        color: Colors.white,
+        size: 40,
+      ),
+      // ignore: deprecated_member_use
+      title: Text("4"),
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -88,30 +148,28 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(S.of(context).home),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        // onPressed: _incrementCounter,
-        onPressed: () {
-          Map pass = {'ee': 'ee'};
-          NavigatorUntil.push(context, "/lo_settingPage",
-              params: {"title": "设置", "other": JsonEncoder().convert(pass)});
-        },
-        tooltip: 'Increment',
-        child: Text("Add"),
+      drawer: new Drawer(child: LODrawerPage()),
+      body: IndexedStack(
+        children: pages,
+        index: selectedIndex,
       ), // This trailing comma makes auto-formatting nicer for build methods.
+      bottomNavigationBar: BottomNavigationBar(
+        // iconSize:400,
+        items: bottomNavItems,
+        currentIndex: selectedIndex,
+        onTap: _onItemTapped,
+        showUnselectedLabels: true,
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.black,
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.white,
+      ),
     );
+  }
+
+  void _onItemTapped(int index) {
+    setState(() {
+      this.selectedIndex = index;
+    });
   }
 }

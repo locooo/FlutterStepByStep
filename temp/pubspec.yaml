@@ -28,16 +28,19 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
-  #GetX 是 Flutter 上的一个轻量且强大的解决方案：高性能的状态管理、智能的依赖注入和便捷的路由管理
-  # get:
+  #状态管理
   provider: ^4.3.2
   #Flutter工具类库 flustars
   flustars: ^0.3.3
   sp_util: ^1.0.1
+  #国际化
   flutter_localizations:
     sdk: flutter
   #路由管理
   fluro: ^1.7.8
+  #GetX 是 Flutter 上的一个轻量且强大的解决方案：高性能的状态管理、智能的依赖注入和便捷的路由管理。
+  get:
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -82,5 +85,6 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  #国际化工具
 flutter_intl:
   enabled: true

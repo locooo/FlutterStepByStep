@@ -9,20 +9,13 @@ import 'package:temp/untils/routers/navigatorUntil.dart';
 import 'package:temp/untils/routers/routes.dart';
 
 class LOSettingPage extends StatelessWidget {
-  final String title;
-  final int testPassParam;
-  const LOSettingPage({Key key, @required this.title, this.testPassParam})
-      : super(key: key);
+  const LOSettingPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: new IconButton(
-          icon: new Icon(Icons.ac_unit),
-          onPressed: () => {Navigator.of(context).pop()},
-        ),
-        title: Text(title),
+        title: Text(S.of(context).setting),
       ),
       body: Container(
         child: ListView(
