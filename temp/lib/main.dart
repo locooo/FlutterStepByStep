@@ -1,23 +1,14 @@
-import 'dart:convert';
-import 'dart:math';
-
-import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sp_util/sp_util.dart';
 import 'package:temp/Drawer/lo_drawerPage.dart';
 import 'package:temp/First/lo_firstPage.dart';
 import 'package:temp/LOSetting/Language/LOLanguageUntil.dart';
-import 'package:temp/LOSetting/Theme/LOSetTheme.dart';
 import 'package:temp/LOSetting/Theme/LOThemeUntil.dart';
-import 'package:temp/LOSetting/lo_settingPage.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:temp/Second/lo_secondPage.dart';
 import 'package:temp/generated/l10n.dart';
 import 'package:temp/untils/routers/application.dart';
-import 'package:temp/untils/routers/navigatorUntil.dart';
-
-import 'untils/routers/routes.dart';
 import 'package:get/get.dart';
 
 void main() async {

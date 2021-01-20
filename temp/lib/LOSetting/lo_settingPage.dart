@@ -1,10 +1,6 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:temp/LOSetting/Language/LOSetLanguage.dart';
-import 'package:temp/LOSetting/Theme/LOSetTheme.dart';
 import 'package:temp/LOSetting/lo_settingCell.dart';
 import 'package:temp/generated/l10n.dart';
-import 'package:temp/untils/routers/application.dart';
 import 'package:temp/untils/routers/navigatorUntil.dart';
 import 'package:temp/untils/routers/routes.dart';
 

@@ -1,6 +1,5 @@
 import 'package:flustars/flustars.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:temp/generated/l10n.dart';
 
 class LOLanguageUntil extends ChangeNotifier {
   static const languageList = ['', 'zh', 'en'];

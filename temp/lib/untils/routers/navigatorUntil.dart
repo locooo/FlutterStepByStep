@@ -1,7 +1,6 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:temp/untils/routers/application.dart';
-import 'package:temp/untils/routers/routes.dart';
 
 class NavigatorUntil {
   //跳转到某个界面

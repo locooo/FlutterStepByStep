@@ -1,9 +1,7 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:temp/First/lo_firstPageModel.dart';
 import 'package:temp/First/lo_singleTree.dart';
-import 'package:temp/LOSetting/Language/LOLanguageCell.dart';
 import 'package:temp/untils/routers/navigatorUntil.dart';
 import 'package:temp/untils/routers/routes.dart';
 
