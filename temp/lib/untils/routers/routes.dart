@@ -30,6 +30,38 @@ class Routes {
   static String testBoxsPage = "/lo_TestBoxsPage";
   static String testDecoratedBoxPage = "/lo_TestDecoratedBoxPage";
   static String testTransformPage = "/lo_TestTransformPage";
+  static String testClipPage = "/lo_TestClipPage";
+
+  static String testSingleChildScrollViewPage =
+      "/lo_TestSingleChildScrollViewPage";
+  static String testListViewPage = "/lo_TestListViewPage";
+  static String testGridViewPage = "/lo_TestGridViewPage";
+  static String testCustomScrollViewTestRoutePage =
+      "/lo_TestCustomScrollViewTestRoutePage";
+  static String testScrollControllerTestRoute =
+      "/lo_TestScrollControllerTestRoute";
+  static String testExpansionTilePage = "/lo_TestExpansionTilePage";
+
+  //AppBar
+  static String testAppBarBasicPage = "/lo_TestAppBarBasicPage";
+  static String testSliverAppbarPage = "/lo_TestSliverAppbarPage";
+  static String testAppBarBottomPage = "/lo_TestAppBarBottomPage";
+  static String testBottomNavigationBarPage = "/lo_TestBottomNavigationBarPage";
+  //Alter
+  static String testAlterViewPage = "/lo_TestAlterViewPage";
+  //UI
+  static String testFutureBuilderPage = "/lo_TestFutureBuilderPage";
+  static String testStreamBuilderPage = "/lo_TestStreamBuilderPage";
+  static String testStreamContollerPage = "/lo_TestStreamContollerPage";
+  //Animation
+  static String testScaleAnimationPage = "/lo_TestScaleAnimationPage";
+  static String testScaleAnimationPage1 = "/lo_TestScaleAnimationPage1";
+  static String testScaleAnimationPage2 = "/lo_TestScaleAnimationPage2";
+  static String testHeroPage = "/lo_TestHeroPage";
+  //EventHandlingAndNotification
+  static String testPointerEventPage = "/lo_TestPointerEventPage";
+  static String testGestureDetectorPage = "/lo_TestGestureDetectorPage";
+  static String testGestureRecognizerPage = "/lo_TestGestureRecognizerPage";
 
   static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = Handler(
@@ -67,5 +99,43 @@ class Routes {
     router.define(testBoxsPage, handler: testBoxsPageHandel);
     router.define(testDecoratedBoxPage, handler: testDecoratedBoxPageHandel);
     router.define(testTransformPage, handler: testTransformPageHandel);
+    router.define(testClipPage, handler: testClipPageHandel);
+    //Widgets_Scroll
+    router.define(testSingleChildScrollViewPage,
+        handler: testSingleChildScrollViewPageHandel);
+    router.define(testListViewPage, handler: testListViewPageHandel);
+    router.define(testGridViewPage, handler: testGridViewPageHandel);
+    router.define(testCustomScrollViewTestRoutePage,
+        handler: testCustomScrollViewTestRoutePageHandel);
+    router.define(testScrollControllerTestRoute,
+        handler: testScrollControllerTestRouteHandel);
+    router.define(testExpansionTilePage, handler: testExpansionTilePageHandel);
+    //AppBar
+    router.define(testAppBarBasicPage, handler: testAppBarBasicPageHandel);
+    router.define(testSliverAppbarPage, handler: testSliverAppbarPageHandel);
+    router.define(testAppBarBottomPage, handler: testAppBarBottomPageHandel);
+    router.define(testBottomNavigationBarPage,
+        handler: testBottomNavigationBarPageHandel);
+    //Alter
+    router.define(testAlterViewPage, handler: testAlterViewPageHandel);
+    //UI
+    router.define(testFutureBuilderPage, handler: testFutureBuilderPageHandel);
+    router.define(testStreamBuilderPage, handler: testStreamBuilderPageHandel);
+    router.define(testStreamContollerPage,
+        handler: testStreamContollerPageHandel);
+    //Animation
+    router.define(testScaleAnimationPage,
+        handler: testScaleAnimationPageHandel);
+    router.define(testScaleAnimationPage1,
+        handler: testScaleAnimationPageHandel1);
+    router.define(testScaleAnimationPage2,
+        handler: testScaleAnimationPageHandel2);
+    router.define(testHeroPage, handler: testHeroPageHandel);
+    //EventHandlingAndNotification
+    router.define(testPointerEventPage, handler: testPointerEventPageHandel);
+    router.define(testGestureDetectorPage,
+        handler: testGestureDetectorPageHandel);
+    router.define(testGestureRecognizerPage,
+        handler: testGestureRecognizerPageHandel);
   }
 }
