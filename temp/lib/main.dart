@@ -73,7 +73,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int selectedIndex = 0;
   final pages = [LOFirstPage(), LOSecondPage(), LOSecondPage(), LOSecondPage()];
-  final pagesText = ['Basics', '用印', '印章', '我的'];
+  List<String> pagesText = ['Basics', 'Practice', 'Practice', 'Practice'];
   final List<BottomNavigationBarItem> bottomNavItems = [
     BottomNavigationBarItem(
       backgroundColor: Colors.black,
@@ -87,8 +87,8 @@ class _MyHomePageState extends State<MyHomePage> {
         color: Colors.white,
         size: 40,
       ),
-      // ignore: deprecated_member_use
-      title: Text('Basics'),
+      label: 'Basics',
+      // title: Text(pagesText[0].toString()),
     ),
     BottomNavigationBarItem(
       backgroundColor: Colors.black,
@@ -102,8 +102,8 @@ class _MyHomePageState extends State<MyHomePage> {
         color: Colors.white,
         size: 40,
       ),
-      // ignore: deprecated_member_use
-      title: Text("2"),
+      label: "Practice",
+      // title: Text("2"),
     ),
     BottomNavigationBarItem(
       backgroundColor: Colors.black,
@@ -113,8 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
         size: 40,
       ),
       activeIcon: Icon(Icons.spa, color: Colors.white, size: 40),
-      // ignore: deprecated_member_use
-      title: Text("3"),
+      label: "Practice",
     ),
     BottomNavigationBarItem(
       backgroundColor: Colors.black,
@@ -128,8 +127,7 @@ class _MyHomePageState extends State<MyHomePage> {
         color: Colors.white,
         size: 40,
       ),
-      // ignore: deprecated_member_use
-      title: Text("4"),
+      label: "Practice",
     ),
   ];
 
@@ -137,7 +135,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(S.of(context).home),
+        title: Text(pagesText[selectedIndex]),
       ),
       drawer: new Drawer(child: LODrawerPage()),
       body: IndexedStack(

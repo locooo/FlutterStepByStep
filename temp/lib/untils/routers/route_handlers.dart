@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:temp/Drawer/lo_drawerPage.dart';
@@ -45,6 +47,9 @@ import 'package:temp/First/Widgets_scroll/lo_SingleChildScollViewPage.dart';
 import 'package:temp/LOSetting/Language/LOSetLanguage.dart';
 import 'package:temp/LOSetting/Theme/LOSetTheme.dart';
 import 'package:temp/LOSetting/lo_settingPage.dart';
+import 'package:temp/Second/Fluro_Use/lo_FluroPushAndPopPage.dart';
+import 'package:temp/Second/Fluro_Use/lo_FluroPushAndPopPage1.dart';
+import 'package:temp/Second/Fluro_Use/lo_FluroPushAndPopPage2.dart';
 import 'package:temp/main.dart';
 
 var rootHandel = Handler(
@@ -272,6 +277,23 @@ var testGestureDetectorPageHandel = Handler(
 var testGestureRecognizerPageHandel = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   return LOGestureRecognizerPage();
+});
+
+//Second
+//Fluro
+
+var testFluroPushAndPopPageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOFluroPushAndPopPage();
+});
+var testFluroPushAndPopPageHandel1 = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  String asdad = params["1Key"].first;
+  return LOFluroPushAndPopPage1(receivedString: asdad);
+});
+var testFluroPushAndPopPageHandel2 = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOFluroPushAndPopPage2();
 });
 
 extension LOBoolParsing on String {

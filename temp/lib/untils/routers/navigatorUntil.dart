@@ -4,7 +4,7 @@ import 'package:temp/untils/routers/application.dart';
 
 class NavigatorUntil {
   //跳转到某个界面
-  static push(BuildContext context, String routeName,
+  static Future push(BuildContext context, String routeName,
       {Map<String, String> params,
       TransitionType transition = TransitionType.native}) {
     String query = "";
@@ -28,7 +28,8 @@ class NavigatorUntil {
     }
     routeName = routeName + "$query";
     print('我是navigateTo传递的参数：$query');
-    Application.router.navigateTo(context, routeName, transition: transition);
+    return Application.router
+        .navigateTo(context, routeName, transition: transition);
   }
 
   //跳转并删除未跳转之前的栈顶页面（先跳转再删）
@@ -48,14 +49,9 @@ class NavigatorUntil {
   }
 
   //MRAK:POP
-  //返回上个界面
-  static pop(BuildContext context) {
-    Navigator.pop(context);
-  }
-
-  //返回上个界面并传值到上个界面
-  static popWithParams(BuildContext context, result) {
-    Navigator.pop(context, result);
+  //返回上个界面 可选传值到上个界面和不传
+  static void pop<T extends Object>(BuildContext context, [T result]) {
+    Navigator.pop<T>(context, result);
   }
 
   //返回到某一个页面

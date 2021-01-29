@@ -63,6 +63,12 @@ class Routes {
   static String testGestureDetectorPage = "/lo_TestGestureDetectorPage";
   static String testGestureRecognizerPage = "/lo_TestGestureRecognizerPage";
 
+  //Second
+  //fluro
+  static String testFluroPushAndPopPage = "/lo_TestFluroPushAndPopPage";
+  static String testFluroPushAndPopPage1 = "/lo_TestFluroPushAndPopPage1";
+  static String testFluroPushAndPopPage2 = "/lo_TestFluroPushAndPopPage2";
+
   static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = Handler(
         handlerFunc: (BuildContext context, Map<String, List<String>> params) {
@@ -137,5 +143,14 @@ class Routes {
         handler: testGestureDetectorPageHandel);
     router.define(testGestureRecognizerPage,
         handler: testGestureRecognizerPageHandel);
+
+    //Second
+    //Fluro
+    router.define(testFluroPushAndPopPage,
+        handler: testFluroPushAndPopPageHandel);
+    router.define(testFluroPushAndPopPage1,
+        handler: testFluroPushAndPopPageHandel1);
+    router.define(testFluroPushAndPopPage2,
+        handler: testFluroPushAndPopPageHandel2);
   }
 }
