@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:temp/First/Animation/lo_ScaleAnimationPage.dart';
 
 class AnimatedImage extends AnimatedWidget {
   AnimatedImage({Key key, Animation<double> animation})

@@ -40,7 +40,6 @@ class _LOGestureDetectorPageState extends State<LOGestureDetectorPage> {
                 },
                 onScaleUpdate: (ScaleUpdateDetails details) {
                   print("缩放${details.scale.clamp(.8, 10.0)}");
-                  ;
                 },
               ),
               //xy都移动

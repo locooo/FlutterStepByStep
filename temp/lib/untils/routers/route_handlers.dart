@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:temp/Drawer/lo_drawerPage.dart';
@@ -47,9 +45,20 @@ import 'package:temp/First/Widgets_scroll/lo_SingleChildScollViewPage.dart';
 import 'package:temp/LOSetting/Language/LOSetLanguage.dart';
 import 'package:temp/LOSetting/Theme/LOSetTheme.dart';
 import 'package:temp/LOSetting/lo_settingPage.dart';
+import 'package:temp/Second/EventBus/lo_EventBusPage1.dart';
+import 'package:temp/Second/EventBus/lo_EventBusPage2.dart';
+import 'package:temp/Second/EventBus/lo_EventBusPage3.dart';
 import 'package:temp/Second/Fluro_Use/lo_FluroPushAndPopPage.dart';
 import 'package:temp/Second/Fluro_Use/lo_FluroPushAndPopPage1.dart';
 import 'package:temp/Second/Fluro_Use/lo_FluroPushAndPopPage2.dart';
+import 'package:temp/Second/Fluro_Use/lo_FluroPushAndPopPage3.dart';
+import 'package:temp/Second/State/lo_%20InheritedWidgetPage.dart';
+import 'package:temp/Second/State/lo_EventBus.dart';
+import 'package:temp/Second/State/lo_EventBus1.dart';
+import 'package:temp/Second/State/lo_NotificationPage.dart';
+import 'package:temp/Second/State/lo_callBackPage.dart';
+import 'package:temp/Second/State/lo_callBackPage1.dart';
+import 'package:temp/Second/State/lo_setStatePage.dart';
 import 'package:temp/main.dart';
 
 var rootHandel = Handler(
@@ -281,7 +290,6 @@ var testGestureRecognizerPageHandel = Handler(
 
 //Second
 //Fluro
-
 var testFluroPushAndPopPageHandel = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   return LOFluroPushAndPopPage();
@@ -294,6 +302,58 @@ var testFluroPushAndPopPageHandel1 = Handler(
 var testFluroPushAndPopPageHandel2 = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   return LOFluroPushAndPopPage2();
+});
+var testFluroPushAndPopPageHandel3 = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  final args = context.settings.arguments as Map;
+  print(context.arguments);
+  return LOFluroPushAndPopPage3(receivedString: args["1111"]);
+});
+//EventBus
+var testEventBusPageHandel1 = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOEventBusPage1();
+});
+var testEventBusPageHandel2 = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOEventBusPage2();
+});
+var testEventBusPageHandel3 = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOEventBusPage3();
+});
+//SetState
+
+var testSetStatePageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOSetStatePage();
+});
+var testCallBackPageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOCallBackPage();
+});
+var testCallBackPageHandel1 = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOCallBackPage1();
+});
+
+var eventBusHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOEventBus();
+});
+
+var eventBusHandel1 = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOEventBus1();
+});
+
+var testNotificationPage1 = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOnotificationPage();
+});
+var testInheritedWidgetpageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOInheritedWidgetpage();
 });
 
 extension LOBoolParsing on String {

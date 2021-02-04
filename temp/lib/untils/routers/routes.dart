@@ -68,6 +68,23 @@ class Routes {
   static String testFluroPushAndPopPage = "/lo_TestFluroPushAndPopPage";
   static String testFluroPushAndPopPage1 = "/lo_TestFluroPushAndPopPage1";
   static String testFluroPushAndPopPage2 = "/lo_TestFluroPushAndPopPage2";
+  static String testFluroPushAndPopPage3 = "/lo_TestFluroPushAndPopPage3";
+
+  //EventBus
+  static String testEventBusPage1 = "/lo_TestEventBusPage1";
+  static String testEventBusPage2 = "/lo_TestEventBusPage2";
+  static String testEventBusPage3 = "/lo_TestEventBusPage3";
+
+//SetState
+  static String testSetStatePage = "/lo_testSetStatePage";
+  static String testCallBackPage = "/lo_testCallBackPage";
+  static String testCallBackPage1 = "/lo_testCallBackPage1";
+
+  static String eventBus = "/lo_eventBus";
+  static String eventBus1 = "/lo_eventBus1";
+
+  static String testNotificationPage = "/lo_testNotificationPage";
+  static String testInheritedWidgetpage = "/lo_testInheritedWidgetpage";
 
   static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = Handler(
@@ -152,5 +169,26 @@ class Routes {
         handler: testFluroPushAndPopPageHandel1);
     router.define(testFluroPushAndPopPage2,
         handler: testFluroPushAndPopPageHandel2);
+    router.define(testFluroPushAndPopPage3,
+        handler: testFluroPushAndPopPageHandel3);
+
+    //EventBus
+
+    router.define(testEventBusPage1, handler: testEventBusPageHandel1);
+    router.define(testEventBusPage2, handler: testEventBusPageHandel2);
+    router.define(testEventBusPage3, handler: testEventBusPageHandel3);
+    //State
+
+    router.define(testSetStatePage, handler: testSetStatePageHandel);
+    router.define(testCallBackPage, handler: testCallBackPageHandel);
+    router.define(testCallBackPage1, handler: testCallBackPageHandel1);
+
+    router.define(eventBus, handler: eventBusHandel);
+    router.define(eventBus1, handler: eventBusHandel1);
+
+    router.define(testNotificationPage, handler: testNotificationPage1);
+
+    router.define(testInheritedWidgetpage,
+        handler: testInheritedWidgetpageHandel);
   }
 }

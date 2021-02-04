@@ -6,7 +6,8 @@ class NavigatorUntil {
   //跳转到某个界面
   static Future push(BuildContext context, String routeName,
       {Map<String, String> params,
-      TransitionType transition = TransitionType.native}) {
+      TransitionType transition = TransitionType.native,
+      RouteSettings routeSettings}) {
     String query = "";
     if (params != null) {
       int index = 0;
@@ -28,8 +29,8 @@ class NavigatorUntil {
     }
     routeName = routeName + "$query";
     print('我是navigateTo传递的参数：$query');
-    return Application.router
-        .navigateTo(context, routeName, transition: transition);
+    return Application.router.navigateTo(context, routeName,
+        transition: transition, routeSettings: routeSettings);
   }
 
   //跳转并删除未跳转之前的栈顶页面（先跳转再删）
@@ -56,6 +57,7 @@ class NavigatorUntil {
 
   //返回到某一个页面
   static popUntil(BuildContext context, String routeName) {
+    // a.settings.arguments
     Navigator.of(context).popUntil(ModalRoute.withName(routeName));
   }
 
