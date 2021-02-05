@@ -17,6 +17,7 @@ class _LOStreamBuilderPageState extends State<LOStreamBuilderPage> {
 
   @override
   Widget build(BuildContext context) {
+    print("我是局部刷新么");
     return Scaffold(
       appBar: AppBar(
         title: Text("StreamBuilder"),

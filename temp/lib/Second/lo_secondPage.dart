@@ -31,11 +31,14 @@ class _LOSecondPageState extends State<LOSecondPage> {
 
   List third = [
     LOFirstPageModel(icon: Icons.adjust, name: "状态管理及传值"),
-    LOFirstPageModel(icon: Icons.adjust, name: "setState"),
-    LOFirstPageModel(icon: Icons.adjust, name: "callBack回调"),
-    LOFirstPageModel(icon: Icons.adjust, name: "EventBus"),
+    LOFirstPageModel(icon: Icons.adjust, name: "setState(会强制整个widget重新构建)"),
+    LOFirstPageModel(icon: Icons.adjust, name: "callBack回调传值"),
+    LOFirstPageModel(icon: Icons.adjust, name: "EventBus传值"),
     LOFirstPageModel(icon: Icons.adjust, name: "Notification(向上传递-向上冒泡传递)"),
     LOFirstPageModel(icon: Icons.adjust, name: "InheritedWidget(向下传递)"),
+    LOFirstPageModel(icon: Icons.adjust, name: "StreamBuilder+Stream(局部重新构建)"),
+    LOFirstPageModel(
+        icon: Icons.adjust, name: "StreamBuilder+StreamContoller(局部重新构建)"),
   ];
   List thirdRoute = [
     Routes.testSetStatePage,
@@ -43,7 +46,19 @@ class _LOSecondPageState extends State<LOSecondPage> {
     Routes.eventBus,
     Routes.testNotificationPage,
     Routes.testInheritedWidgetpage,
+    Routes.testStreamBuilderPage,
+    Routes.testStreamContollerPage,
   ];
+
+  // List seven = [
+  //   LOFirstPageModel(icon: Icons.update, name: "Async_widgets(异步更新UI)"),
+  //   LOFirstPageModel(icon: Icons.list, name: "FutureBuilder"),
+
+  // ];
+  // List sevenRoute = [
+  //   Routes.testFutureBuilderPage,
+
+  // ];
 
   @override
   Widget build(BuildContext context) {
