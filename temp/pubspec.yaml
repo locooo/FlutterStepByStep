@@ -1,4 +1,6 @@
+# 应用名称
 name: temp
+# 应用描述
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -15,16 +17,17 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# 应用版本
 version: 1.0.0+1
-
+# Dart 运行环境区间
 environment:
   sdk: ">=2.7.0 <3.0.0"
-
+  # 限制flutterSDK版本
+  # flutter: "1.22.0"
+# Flutter 依赖库
 dependencies:
   flutter:
     sdk: flutter
-
-
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
@@ -40,12 +43,14 @@ dependencies:
   fluro: ^1.7.8
   #GetX 是 Flutter 上的一个轻量且强大的解决方案：高性能的状态管理、智能的依赖注入和便捷的路由管理。
   get:
+  
   #通过事件总线来触发事件和监听事件
   #事件总线，是一种广播机制，遵循发布-订阅关系，发布者和订阅者之间不需要有父子关系。
   #在应用不需要大量的共享数据时,可以使用Event Bus来共享状态
   event_bus: ^1.1.1
   #
   #权限授权请求 https://github.com/Baseflow/flutter-permission-handler
+  scoped_model: ^1.1.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

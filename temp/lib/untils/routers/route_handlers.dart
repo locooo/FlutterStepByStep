@@ -53,6 +53,7 @@ import 'package:temp/Second/Fluro_Use/lo_FluroPushAndPopPage1.dart';
 import 'package:temp/Second/Fluro_Use/lo_FluroPushAndPopPage2.dart';
 import 'package:temp/Second/Fluro_Use/lo_FluroPushAndPopPage3.dart';
 import 'package:temp/Second/State/lo_%20InheritedWidgetPage.dart';
+import 'package:temp/Second/State/lo_%20ValueListenableBuilderPage.dart';
 import 'package:temp/Second/State/lo_EventBus.dart';
 import 'package:temp/Second/State/lo_EventBus1.dart';
 import 'package:temp/Second/State/lo_NotificationPage.dart';
@@ -354,6 +355,10 @@ var testNotificationPage1 = Handler(
 var testInheritedWidgetpageHandel = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   return LOInheritedWidgetpage();
+});
+var testValueListenableBuilderpageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOValueListenableBuilderpage();
 });
 
 extension LOBoolParsing on String {

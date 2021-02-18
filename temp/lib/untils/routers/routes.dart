@@ -86,6 +86,9 @@ class Routes {
   static String testNotificationPage = "/lo_testNotificationPage";
   static String testInheritedWidgetpage = "/lo_testInheritedWidgetpage";
 
+  static String testValueListenableBuilderpage =
+      "/lo_testValueListenableBuilderpage";
+
   static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = Handler(
         handlerFunc: (BuildContext context, Map<String, List<String>> params) {
@@ -190,5 +193,7 @@ class Routes {
 
     router.define(testInheritedWidgetpage,
         handler: testInheritedWidgetpageHandel);
+    router.define(testValueListenableBuilderpage,
+        handler: testValueListenableBuilderpageHandel);
   }
 }

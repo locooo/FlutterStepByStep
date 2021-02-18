@@ -39,6 +39,8 @@ class _LOSecondPageState extends State<LOSecondPage> {
     LOFirstPageModel(icon: Icons.adjust, name: "StreamBuilder+Stream(局部重新构建)"),
     LOFirstPageModel(
         icon: Icons.adjust, name: "StreamBuilder+StreamContoller(局部重新构建)"),
+    LOFirstPageModel(
+        icon: Icons.adjust, name: "ValueListenableBuilder(局部重新构建)"),
   ];
   List thirdRoute = [
     Routes.testSetStatePage,
@@ -48,6 +50,7 @@ class _LOSecondPageState extends State<LOSecondPage> {
     Routes.testInheritedWidgetpage,
     Routes.testStreamBuilderPage,
     Routes.testStreamContollerPage,
+    Routes.testValueListenableBuilderpage,
   ];
 
   // List seven = [
