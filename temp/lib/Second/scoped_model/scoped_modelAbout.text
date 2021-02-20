@@ -1,0 +1,14 @@
+
+
+①scoped_model状态管理
+
+ScopedModelDescendant 包裹的widget会刷新,不会全局刷新
+ScopedModel.of<LOScopedSingleModel>(context, rebuildOnChange: true).countInt; 会引起build重新渲染
+利用InheritedWidget实现
+
+跨页面共享状态
+1.使用MaterialApp包裹,如lo_scoped_model_SingleModelPage.dart中第25行
+2.如不使用MaterialApp包裹就使用push  RouteSettings arguments传递模型 lo_scoped_model_SingleModelPage2.dart
+
+
+②flutter_redux状态管理

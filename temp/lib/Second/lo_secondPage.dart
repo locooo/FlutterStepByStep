@@ -53,15 +53,21 @@ class _LOSecondPageState extends State<LOSecondPage> {
     Routes.testValueListenableBuilderpage,
   ];
 
-  // List seven = [
-  //   LOFirstPageModel(icon: Icons.update, name: "Async_widgets(异步更新UI)"),
-  //   LOFirstPageModel(icon: Icons.list, name: "FutureBuilder"),
+  List fourth = [
+    LOFirstPageModel(icon: Icons.update, name: "scoped_model(状态管理)"),
+    LOFirstPageModel(icon: Icons.list, name: "scoped_model"),
+  ];
+  List fourthRoute = [
+    Routes.testLOScopedModelSingleModelPage,
+  ];
 
-  // ];
-  // List sevenRoute = [
-  //   Routes.testFutureBuilderPage,
-
-  // ];
+  List fifth = [
+    LOFirstPageModel(icon: Icons.update, name: "flutter_redux(状态管理)"),
+    LOFirstPageModel(icon: Icons.list, name: "flutter_redux"),
+  ];
+  List fifthRoute = [
+    Routes.testLOReduxPage,
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -85,6 +91,18 @@ class _LOSecondPageState extends State<LOSecondPage> {
             listData: third,
             onTap: (int index) {
               NavigatorUntil.push(context, thirdRoute[index]);
+            },
+          ),
+          LOSingleTree(
+            listData: fourth,
+            onTap: (int index) {
+              NavigatorUntil.push(context, fourthRoute[index]);
+            },
+          ),
+          LOSingleTree(
+            listData: fifth,
+            onTap: (int index) {
+              NavigatorUntil.push(context, fifthRoute[index]);
             },
           ),
         ],

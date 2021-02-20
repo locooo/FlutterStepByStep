@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:temp/untils/routers/navigatorUntil.dart';
-import 'package:temp/untils/routers/routes.dart';
 
 class LOCallBackPage extends StatefulWidget {
   LOCallBackPage({Key key}) : super(key: key);

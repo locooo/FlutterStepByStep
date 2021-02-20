@@ -60,6 +60,12 @@ import 'package:temp/Second/State/lo_NotificationPage.dart';
 import 'package:temp/Second/State/lo_callBackPage.dart';
 import 'package:temp/Second/State/lo_callBackPage1.dart';
 import 'package:temp/Second/State/lo_setStatePage.dart';
+import 'package:temp/Second/flutter_redux/lo_flutter_reduxPage.dart';
+import 'package:temp/Second/flutter_redux/lo_flutter_reduxPage1.dart';
+import 'package:temp/Second/scoped_model/scoped_model_SingleModel/lo_scoped_model_SingleModel.dart';
+import 'package:temp/Second/scoped_model/scoped_model_SingleModel/lo_scoped_model_SingleModelPage.dart';
+import 'package:temp/Second/scoped_model/scoped_model_SingleModel/lo_scoped_model_SingleModelPage1.dart';
+import 'package:temp/Second/scoped_model/scoped_model_SingleModel/lo_scoped_model_SingleModelPage2.dart';
 import 'package:temp/main.dart';
 
 var rootHandel = Handler(
@@ -359,6 +365,30 @@ var testInheritedWidgetpageHandel = Handler(
 var testValueListenableBuilderpageHandel = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   return LOValueListenableBuilderpage();
+});
+var testLOScopedModelSingleModelPageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOScopedModelSingleModelPage();
+});
+
+var testLOScopedModelSingleModelPage1Handel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOScopedModelSingleModelPage1();
+});
+
+var testLOScopedModelSingleModelPage2Handel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  final args = context.settings.arguments as LOScopedSingleModel;
+  return LOScopedModelSingleModelPage2(model: args);
+});
+
+var testLOReduxPageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOReduxPage();
+});
+var testLOReduxPage1Handel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOreduxPage1();
 });
 
 extension LOBoolParsing on String {

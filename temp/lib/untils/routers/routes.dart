@@ -89,6 +89,18 @@ class Routes {
   static String testValueListenableBuilderpage =
       "/lo_testValueListenableBuilderpage";
 
+  //scoped_model
+  static String testLOScopedModelSingleModelPage =
+      "/lo_LOScopedModelSingleModelPage";
+  static String testLOScopedModelSingleModelPage1 =
+      "/lo_LOScopedModelSingleModelPage1";
+  static String testLOScopedModelSingleModelPage2 =
+      "/lo_LOScopedModelSingleModelPage2";
+
+  //flutter_redux
+  static String testLOReduxPage = "/lo_LOReduxPage";
+  static String testLOreduxPage1 = "/lo_LOreduxPage1";
+
   static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = Handler(
         handlerFunc: (BuildContext context, Map<String, List<String>> params) {
@@ -195,5 +207,17 @@ class Routes {
         handler: testInheritedWidgetpageHandel);
     router.define(testValueListenableBuilderpage,
         handler: testValueListenableBuilderpageHandel);
+
+    //scope_model
+    router.define(testLOScopedModelSingleModelPage,
+        handler: testLOScopedModelSingleModelPageHandel);
+    router.define(testLOScopedModelSingleModelPage1,
+        handler: testLOScopedModelSingleModelPage1Handel);
+    router.define(testLOScopedModelSingleModelPage2,
+        handler: testLOScopedModelSingleModelPage2Handel);
+
+    //flutter_redux
+    router.define(testLOReduxPage, handler: testLOReduxPageHandel);
+    router.define(testLOreduxPage1, handler: testLOReduxPage1Handel);
   }
 }

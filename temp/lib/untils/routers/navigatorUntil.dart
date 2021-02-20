@@ -28,7 +28,10 @@ class NavigatorUntil {
       }
     }
     routeName = routeName + "$query";
-    print('我是navigateTo传递的参数：$query');
+    if (query.isEmpty == false) {
+      print('我是navigateTo传递的参数：$query');
+    }
+
     return Application.router.navigateTo(context, routeName,
         transition: transition, routeSettings: routeSettings);
   }
