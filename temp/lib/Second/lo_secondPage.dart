@@ -54,7 +54,7 @@ class _LOSecondPageState extends State<LOSecondPage> {
   ];
 
   List fourth = [
-    LOFirstPageModel(icon: Icons.update, name: "scoped_model(状态管理)"),
+    LOFirstPageModel(icon: Icons.adjust, name: "scoped_model(状态管理)"),
     LOFirstPageModel(icon: Icons.list, name: "scoped_model"),
   ];
   List fourthRoute = [
@@ -62,11 +62,19 @@ class _LOSecondPageState extends State<LOSecondPage> {
   ];
 
   List fifth = [
-    LOFirstPageModel(icon: Icons.update, name: "flutter_redux(状态管理)"),
+    LOFirstPageModel(icon: Icons.adjust, name: "flutter_redux(状态管理)"),
     LOFirstPageModel(icon: Icons.list, name: "flutter_redux"),
   ];
   List fifthRoute = [
     Routes.testLOReduxPage,
+  ];
+
+  List sixth = [
+    LOFirstPageModel(icon: Icons.adjust, name: "flutter_bloc(状态管理)"),
+    LOFirstPageModel(icon: Icons.list, name: "flutter_bloc"),
+  ];
+  List sixRoute = [
+    Routes.testLOFlutterBlocMainFaPage,
   ];
 
   @override
@@ -103,6 +111,12 @@ class _LOSecondPageState extends State<LOSecondPage> {
             listData: fifth,
             onTap: (int index) {
               NavigatorUntil.push(context, fifthRoute[index]);
+            },
+          ),
+          LOSingleTree(
+            listData: sixth,
+            onTap: (int index) {
+              NavigatorUntil.push(context, sixRoute[index]);
             },
           ),
         ],

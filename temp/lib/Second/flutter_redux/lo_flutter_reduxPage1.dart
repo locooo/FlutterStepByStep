@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:temp/Second/flutter_redux/lo_flutter_reduxState.dart';
 
 class LOreduxPage1 extends StatelessWidget {
   const LOreduxPage1({Key key}) : super(key: key);

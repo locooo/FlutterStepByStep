@@ -101,6 +101,11 @@ class Routes {
   static String testLOReduxPage = "/lo_LOReduxPage";
   static String testLOreduxPage1 = "/lo_LOreduxPage1";
 
+//flutter_bloc
+  static String testLOFlutterBlocMainFaPage = "/lo_LOFlutterBlocMainFaPage";
+  static String testLOCounterBloc1Page = "/lo_testLOCounterBloc1Page";
+  static String testLOCounterBloc1ChildPage = "/lo_testLOCounterBloc1ChildPage";
+
   static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = Handler(
         handlerFunc: (BuildContext context, Map<String, List<String>> params) {
@@ -219,5 +224,14 @@ class Routes {
     //flutter_redux
     router.define(testLOReduxPage, handler: testLOReduxPageHandel);
     router.define(testLOreduxPage1, handler: testLOReduxPage1Handel);
+
+    //flutter_bloc
+
+    router.define(testLOFlutterBlocMainFaPage,
+        handler: testLOFlutterBlocMainFaPageHandel);
+    router.define(testLOCounterBloc1Page,
+        handler: testLOCounterBloc1PageHandel);
+    router.define(testLOCounterBloc1ChildPage,
+        handler: testLOCounterBloc1ChildPageHandel);
   }
 }

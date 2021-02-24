@@ -54,6 +54,12 @@ dependencies:
   #状态管理
   redux: ^4.0.0
   flutter_redux: ^0.7.0
+  #状态管理
+  bloc: ^6.1.0
+  flutter_bloc: ^6.1.2
+  equatable: ^1.2.6
+  rxdart: ^0.25.0
+  http: ^0.12.2
 dev_dependencies:
   flutter_test:
     sdk: flutter

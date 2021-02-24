@@ -56,6 +56,7 @@ class ScrollControllerTestRouteState extends State<ScrollControllerTestRoute> {
           ? null
           : FloatingActionButton(
               child: Icon(Icons.arrow_upward),
+              heroTag: 'ScrollControllerTestRoute',
               onPressed: () {
                 //返回到顶部时执行动画
                 _controller.animateTo(.0,

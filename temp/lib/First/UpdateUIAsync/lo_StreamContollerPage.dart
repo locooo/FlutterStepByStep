@@ -82,6 +82,7 @@ class _LOStreamContollerPageState extends State<LOStreamContollerPage> {
       floatingActionButton: FloatingActionButton(
         onPressed: onFloatActionButtonPress,
         child: Icon(Icons.add),
+        heroTag: 'LOStreamContollerPage',
       ),
     );
   }

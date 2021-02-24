@@ -60,6 +60,9 @@ import 'package:temp/Second/State/lo_NotificationPage.dart';
 import 'package:temp/Second/State/lo_callBackPage.dart';
 import 'package:temp/Second/State/lo_callBackPage1.dart';
 import 'package:temp/Second/State/lo_setStatePage.dart';
+import 'package:temp/Second/flutter_bloc/countBloc1/LOCounterBloc1ChildPage.dart';
+import 'package:temp/Second/flutter_bloc/countBloc1/counterbloc1Page.dart';
+import 'package:temp/Second/flutter_bloc/flutter_bloc_mainPage.dart';
 import 'package:temp/Second/flutter_redux/lo_flutter_reduxPage.dart';
 import 'package:temp/Second/flutter_redux/lo_flutter_reduxPage1.dart';
 import 'package:temp/Second/scoped_model/scoped_model_SingleModel/lo_scoped_model_SingleModel.dart';
@@ -389,6 +392,21 @@ var testLOReduxPageHandel = Handler(
 var testLOReduxPage1Handel = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   return LOreduxPage1();
+});
+
+//flutter_bloc
+var testLOFlutterBlocMainFaPageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOFlutterBlocMainFaPage();
+});
+
+var testLOCounterBloc1PageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOCounterBloc1Page();
+});
+var testLOCounterBloc1ChildPageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOCounterBloc1ChildPage();
 });
 
 extension LOBoolParsing on String {
