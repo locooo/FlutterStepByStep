@@ -77,6 +77,14 @@ class _LOSecondPageState extends State<LOSecondPage> {
     Routes.testLOFlutterBlocMainFaPage,
   ];
 
+  List seventh = [
+    LOFirstPageModel(icon: Icons.adjust, name: "flutter_mobx(状态管理)"),
+    LOFirstPageModel(icon: Icons.list, name: "flutter_mobx"),
+  ];
+  List sevenRoute = [
+    Routes.testLOMobxCounterPage,
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -117,6 +125,12 @@ class _LOSecondPageState extends State<LOSecondPage> {
             listData: sixth,
             onTap: (int index) {
               NavigatorUntil.push(context, sixRoute[index]);
+            },
+          ),
+          LOSingleTree(
+            listData: seventh,
+            onTap: (int index) {
+              NavigatorUntil.push(context, sevenRoute[index]);
             },
           ),
         ],

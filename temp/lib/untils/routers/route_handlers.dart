@@ -53,16 +53,18 @@ import 'package:temp/Second/Fluro_Use/lo_FluroPushAndPopPage1.dart';
 import 'package:temp/Second/Fluro_Use/lo_FluroPushAndPopPage2.dart';
 import 'package:temp/Second/Fluro_Use/lo_FluroPushAndPopPage3.dart';
 import 'package:temp/Second/State/lo_%20InheritedWidgetPage.dart';
-import 'package:temp/Second/State/lo_%20ValueListenableBuilderPage.dart';
 import 'package:temp/Second/State/lo_EventBus.dart';
 import 'package:temp/Second/State/lo_EventBus1.dart';
 import 'package:temp/Second/State/lo_NotificationPage.dart';
+import 'package:temp/Second/State/lo_ValueListenableBuilderPage.dart';
 import 'package:temp/Second/State/lo_callBackPage.dart';
 import 'package:temp/Second/State/lo_callBackPage1.dart';
 import 'package:temp/Second/State/lo_setStatePage.dart';
 import 'package:temp/Second/flutter_bloc/countBloc1/LOCounterBloc1ChildPage.dart';
 import 'package:temp/Second/flutter_bloc/countBloc1/counterbloc1Page.dart';
 import 'package:temp/Second/flutter_bloc/flutter_bloc_mainPage.dart';
+import 'package:temp/Second/flutter_mobx/mobx_counterChildPage.dart';
+import 'package:temp/Second/flutter_mobx/mobx_counterPage.dart';
 import 'package:temp/Second/flutter_redux/lo_flutter_reduxPage.dart';
 import 'package:temp/Second/flutter_redux/lo_flutter_reduxPage1.dart';
 import 'package:temp/Second/scoped_model/scoped_model_SingleModel/lo_scoped_model_SingleModel.dart';
@@ -407,6 +409,17 @@ var testLOCounterBloc1PageHandel = Handler(
 var testLOCounterBloc1ChildPageHandel = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   return LOCounterBloc1ChildPage();
+});
+
+//flutter_mobx
+
+var testLOMobxCounterPageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOMobxCounterPage();
+});
+var testLOMobxCounterChildPageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOMobxCounterChildPage();
 });
 
 extension LOBoolParsing on String {

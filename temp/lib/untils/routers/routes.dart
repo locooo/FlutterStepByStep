@@ -106,6 +106,11 @@ class Routes {
   static String testLOCounterBloc1Page = "/lo_testLOCounterBloc1Page";
   static String testLOCounterBloc1ChildPage = "/lo_testLOCounterBloc1ChildPage";
 
+//flutter_mobx
+
+  static String testLOMobxCounterPage = "/lo_testLOMobxCounterPage";
+  static String testLOMobxCounterChildPage = "/lo_testLOMobxCounterChildPage";
+
   static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = Handler(
         handlerFunc: (BuildContext context, Map<String, List<String>> params) {
@@ -233,5 +238,10 @@ class Routes {
         handler: testLOCounterBloc1PageHandel);
     router.define(testLOCounterBloc1ChildPage,
         handler: testLOCounterBloc1ChildPageHandel);
+
+    //flutter_mobx
+    router.define(testLOMobxCounterPage, handler: testLOMobxCounterPageHandel);
+    router.define(testLOMobxCounterChildPage,
+        handler: testLOMobxCounterChildPageHandel);
   }
 }
