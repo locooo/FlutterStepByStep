@@ -52,6 +52,8 @@ import 'package:temp/Second/Fluro_Use/lo_FluroPushAndPopPage.dart';
 import 'package:temp/Second/Fluro_Use/lo_FluroPushAndPopPage1.dart';
 import 'package:temp/Second/Fluro_Use/lo_FluroPushAndPopPage2.dart';
 import 'package:temp/Second/Fluro_Use/lo_FluroPushAndPopPage3.dart';
+import 'package:temp/Second/Provider/lo_ProviderChildPage.dart';
+import 'package:temp/Second/Provider/lo_Providerpage.dart';
 import 'package:temp/Second/State/lo_%20InheritedWidgetPage.dart';
 import 'package:temp/Second/State/lo_EventBus.dart';
 import 'package:temp/Second/State/lo_EventBus1.dart';
@@ -60,6 +62,8 @@ import 'package:temp/Second/State/lo_ValueListenableBuilderPage.dart';
 import 'package:temp/Second/State/lo_callBackPage.dart';
 import 'package:temp/Second/State/lo_callBackPage1.dart';
 import 'package:temp/Second/State/lo_setStatePage.dart';
+import 'package:temp/Second/flutter_GetX/test_getx/lo_getxchildPage.dart';
+import 'package:temp/Second/flutter_GetX/test_getx/view.dart';
 import 'package:temp/Second/flutter_bloc/countBloc1/LOCounterBloc1ChildPage.dart';
 import 'package:temp/Second/flutter_bloc/countBloc1/counterbloc1Page.dart';
 import 'package:temp/Second/flutter_bloc/flutter_bloc_mainPage.dart';
@@ -71,9 +75,15 @@ import 'package:temp/Second/scoped_model/scoped_model_SingleModel/lo_scoped_mode
 import 'package:temp/Second/scoped_model/scoped_model_SingleModel/lo_scoped_model_SingleModelPage.dart';
 import 'package:temp/Second/scoped_model/scoped_model_SingleModel/lo_scoped_model_SingleModelPage1.dart';
 import 'package:temp/Second/scoped_model/scoped_model_SingleModel/lo_scoped_model_SingleModelPage2.dart';
+import 'package:temp/lo_SpashPage.dart';
 import 'package:temp/main.dart';
 
 var rootHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return SplashPage();
+});
+
+var homeHandel = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   return MyHomePage();
 });
@@ -420,6 +430,26 @@ var testLOMobxCounterPageHandel = Handler(
 var testLOMobxCounterChildPageHandel = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   return LOMobxCounterChildPage();
+});
+//GetX
+var testTestGetxPageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return TestGetxPage();
+});
+var testLOGetXchildPageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOGetXchildPage();
+});
+
+//Provider
+var loProviderPageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOProviderPage();
+});
+
+var loProviderChildPageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOProviderChildPage();
 });
 
 extension LOBoolParsing on String {

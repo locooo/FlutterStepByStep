@@ -8,32 +8,37 @@ import 'package:temp/untils/routers/routes.dart';
 
 class LOReduxPage extends StatelessWidget {
   LOReduxPage({Key key}) : super(key: key);
-  final store = Store<int>(counterReducer, initialState: 0);
+
   @override
   Widget build(BuildContext context) {
-    return LOFlutterReduxPage(store: store);
+    final store = Store<LOReduxCountState>(counterReducer,
+        initialState: LOReduxCountState(0));
+    return LOFlutterReduxPage(
+      store: store,
+    );
   }
 }
 
 class LOFlutterReduxPage extends StatelessWidget {
   const LOFlutterReduxPage({Key key, this.store}) : super(key: key);
-  final Store<int> store;
+  final Store<LOReduxCountState> store;
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: StoreProvider<int>(
-        store: store,
-        child: Scaffold(
+    return StoreProvider<LOReduxCountState>(
+      store: store,
+      child: MaterialApp(
+        home: Scaffold(
           appBar: AppBar(
             title: Text("222"),
           ),
           body: Column(
             children: [
               Container(
-                child: Text("${store.state}"),
+                child: Text("${store.state.count}"),
               ),
-              StoreConnector<int, String>(
-                converter: (store) => store.state.toString(),
+              StoreConnector<LOReduxCountState, String>(
+                converter: (store) => store.state.count.toString(),
                 builder: (context, count) {
                   return Text(count);
                 },

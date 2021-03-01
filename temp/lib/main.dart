@@ -11,6 +11,8 @@ import 'package:temp/generated/l10n.dart';
 import 'package:temp/untils/routers/application.dart';
 import 'package:get/get.dart';
 
+import 'Second/Provider/lo_Provider_counter.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SpUtil.getInstance();
@@ -27,7 +29,8 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider.value(value: LOThemeUntil()),
-        ChangeNotifierProvider.value(value: LOLanguageUntil())
+        ChangeNotifierProvider.value(value: LOLanguageUntil()),
+        ChangeNotifierProvider(create: (_) => LOProviderCounter()),
       ],
       child: Consumer2<LOThemeUntil, LOLanguageUntil>(
         builder: (context, themeUntil, languageUntil, child) {

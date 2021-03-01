@@ -4,6 +4,7 @@ import 'route_handlers.dart';
 
 class Routes {
   static String root = "/";
+  static String home = "/home";
   static String settingPage = "/lo_settingPage";
   static String settingThemePage = "/lo_settingThemePage";
   static String settingLanguagePage = "/lo_settingLanguagePage";
@@ -111,6 +112,15 @@ class Routes {
   static String testLOMobxCounterPage = "/lo_testLOMobxCounterPage";
   static String testLOMobxCounterChildPage = "/lo_testLOMobxCounterChildPage";
 
+  //GetX
+  static String testTestGetxPage = "/lo_testTestGetxPage";
+  static String testLOGetXchildPage = "/lo_testLOGetXchildPage";
+
+  //Provider
+
+  static String loProviderPage = "/lo_ProviderPage";
+  static String loProviderChildPage = "/lo_ProviderChildPage";
+
   static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = Handler(
         handlerFunc: (BuildContext context, Map<String, List<String>> params) {
@@ -118,6 +128,7 @@ class Routes {
       return;
     });
     router.define(root, handler: rootHandel);
+    router.define(home, handler: homeHandel);
     router.define(loDrawerPage, handler: drawerPageHandel);
     router.define(settingPage, handler: settingPageHandel);
     router.define(settingThemePage, handler: settingThemePageHandel);
@@ -243,5 +254,13 @@ class Routes {
     router.define(testLOMobxCounterPage, handler: testLOMobxCounterPageHandel);
     router.define(testLOMobxCounterChildPage,
         handler: testLOMobxCounterChildPageHandel);
+
+    //GetX
+    router.define(testTestGetxPage, handler: testTestGetxPageHandel);
+    router.define(testLOGetXchildPage, handler: testLOGetXchildPageHandel);
+
+    //Provider
+    router.define(loProviderPage, handler: loProviderPageHandel);
+    router.define(loProviderChildPage, handler: loProviderChildPageHandel);
   }
 }

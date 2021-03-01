@@ -85,6 +85,21 @@ class _LOSecondPageState extends State<LOSecondPage> {
     Routes.testLOMobxCounterPage,
   ];
 
+  List eighth = [
+    LOFirstPageModel(icon: Icons.adjust, name: "GetX(状态管理)"),
+    LOFirstPageModel(icon: Icons.list, name: "GetX"),
+  ];
+  List eighthRoute = [
+    Routes.testTestGetxPage,
+  ];
+  List ninth = [
+    LOFirstPageModel(icon: Icons.adjust, name: "Provider(状态管理)"),
+    LOFirstPageModel(icon: Icons.list, name: "Provider"),
+  ];
+  List ninthRoute = [
+    Routes.loProviderPage,
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -131,6 +146,18 @@ class _LOSecondPageState extends State<LOSecondPage> {
             listData: seventh,
             onTap: (int index) {
               NavigatorUntil.push(context, sevenRoute[index]);
+            },
+          ),
+          LOSingleTree(
+            listData: eighth,
+            onTap: (int index) {
+              NavigatorUntil.push(context, eighthRoute[index]);
+            },
+          ),
+          LOSingleTree(
+            listData: ninth,
+            onTap: (int index) {
+              NavigatorUntil.push(context, ninthRoute[index]);
             },
           ),
         ],

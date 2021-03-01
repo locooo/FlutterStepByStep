@@ -2,14 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:get/route_manager.dart';
 import 'package:provider/provider.dart';
 import 'package:temp/LOSetting/Language/LOLanguageUntil.dart';
 import 'package:temp/LOSetting/Theme/LOThemeUntil.dart';
-import 'package:temp/Second/flutter_bloc/countBloc1/LOCounterBloc1ChildPage.dart';
 import 'package:temp/Second/flutter_bloc/countBloc1/bloc/counterbloc1_bloc.dart';
 import 'package:temp/generated/l10n.dart';
-import 'package:temp/untils/routers/application.dart';
 import 'package:temp/untils/routers/navigatorUntil.dart';
 import 'package:temp/untils/routers/routes.dart';
 

@@ -14,10 +14,10 @@ class LOReduxCountState {
 enum LOReduxCountAction { increment }
 
 //reducer会根据传进来的action生成新的CountState
-int counterReducer(int state, action) {
+LOReduxCountState counterReducer(LOReduxCountState state, action) {
   //匹配Action
   if (action == LOReduxCountAction.increment) {
-    return (state + 1);
+    return LOReduxCountState(state.count + 1);
   }
-  return state;
+  return LOReduxCountState(state.count);
 }
