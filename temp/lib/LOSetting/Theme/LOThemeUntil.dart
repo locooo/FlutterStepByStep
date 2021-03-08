@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 class LOThemeUntil extends ChangeNotifier {
   static const Map themeType = {
     0: {
-      //green
-      "primaryColor": Color(0xff4caf50),
-      "primaryColorDark": Color(0xff388E3C),
-      "colorAccent": Color(0xff8BC34A),
-      "primaryColorLight": Color(0xffC8E6C9),
+      //black
+      "primaryColor": Color(0xff333333),
+      "primaryColorDark": Color(0xff000000),
+      "colorAccent": Color(0xff666666),
+      "primaryColorLight": Color(0xff999999),
     },
     1: {
       //red
@@ -46,11 +46,11 @@ class LOThemeUntil extends ChangeNotifier {
       "primaryColorLight": Color(0xffF5F5F5),
     },
     6: {
-      //black
-      "primaryColor": Color(0xff333333),
-      "primaryColorDark": Color(0xff000000),
-      "colorAccent": Color(0xff666666),
-      "primaryColorLight": Color(0xff999999),
+      //green
+      "primaryColor": Color(0xff4caf50),
+      "primaryColorDark": Color(0xff388E3C),
+      "colorAccent": Color(0xff8BC34A),
+      "primaryColorLight": Color(0xffC8E6C9),
     },
   };
 

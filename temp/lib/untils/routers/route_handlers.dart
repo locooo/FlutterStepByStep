@@ -54,9 +54,9 @@ import 'package:temp/Second/Fluro_Use/lo_FluroPushAndPopPage2.dart';
 import 'package:temp/Second/Fluro_Use/lo_FluroPushAndPopPage3.dart';
 import 'package:temp/Second/Provider/lo_ProviderChildPage.dart';
 import 'package:temp/Second/Provider/lo_Providerpage.dart';
-import 'package:temp/Second/State/lo_%20InheritedWidgetPage.dart';
 import 'package:temp/Second/State/lo_EventBus.dart';
 import 'package:temp/Second/State/lo_EventBus1.dart';
+import 'package:temp/Second/State/lo_InheritedWidgetPage.dart';
 import 'package:temp/Second/State/lo_NotificationPage.dart';
 import 'package:temp/Second/State/lo_ValueListenableBuilderPage.dart';
 import 'package:temp/Second/State/lo_callBackPage.dart';
@@ -75,6 +75,7 @@ import 'package:temp/Second/scoped_model/scoped_model_SingleModel/lo_scoped_mode
 import 'package:temp/Second/scoped_model/scoped_model_SingleModel/lo_scoped_model_SingleModelPage.dart';
 import 'package:temp/Second/scoped_model/scoped_model_SingleModel/lo_scoped_model_SingleModelPage1.dart';
 import 'package:temp/Second/scoped_model/scoped_model_SingleModel/lo_scoped_model_SingleModelPage2.dart';
+import 'package:temp/Third/Dio/lo_dioPage.dart';
 import 'package:temp/lo_SpashPage.dart';
 import 'package:temp/main.dart';
 
@@ -450,6 +451,13 @@ var loProviderPageHandel = Handler(
 var loProviderChildPageHandel = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   return LOProviderChildPage();
+});
+
+//Third
+
+var loDioPageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LODioPage();
 });
 
 extension LOBoolParsing on String {

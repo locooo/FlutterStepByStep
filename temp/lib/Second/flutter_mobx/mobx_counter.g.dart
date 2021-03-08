@@ -50,6 +50,17 @@ mixin _$LOMobxCounter on _LOMobxCounter, Store {
   }
 
   @override
+  void setMobxAppointValue(int value) {
+    final _$actionInfo = _$_LOMobxCounterActionController.startAction(
+        name: '_LOMobxCounter.setMobxAppointValue');
+    try {
+      return super.setMobxAppointValue(value);
+    } finally {
+      _$_LOMobxCounterActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
 mobxInt: ${mobxInt}

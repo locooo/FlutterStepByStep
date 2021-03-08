@@ -7,6 +7,7 @@ import 'package:temp/LOSetting/Language/LOLanguageUntil.dart';
 import 'package:temp/LOSetting/Theme/LOThemeUntil.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:temp/Second/lo_secondPage.dart';
+import 'package:temp/Third/lo_thirdPage.dart';
 import 'package:temp/generated/l10n.dart';
 import 'package:temp/untils/routers/application.dart';
 import 'package:get/get.dart';
@@ -75,8 +76,8 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int selectedIndex = 0;
-  final pages = [LOFirstPage(), LOSecondPage(), LOSecondPage(), LOSecondPage()];
-  List<String> pagesText = ['Basics', 'Practice', 'Practice', 'Practice'];
+  final pages = [LOFirstPage(), LOSecondPage(), LOThirdPage(), LOSecondPage()];
+  List<String> pagesText = ['Basics', 'State', 'Untils', 'Practice'];
   final List<BottomNavigationBarItem> bottomNavItems = [
     BottomNavigationBarItem(
       backgroundColor: Colors.black,
@@ -105,7 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
         color: Colors.white,
         size: 40,
       ),
-      label: "Practice",
+      label: "State",
       // title: Text("2"),
     ),
     BottomNavigationBarItem(
@@ -116,7 +117,7 @@ class _MyHomePageState extends State<MyHomePage> {
         size: 40,
       ),
       activeIcon: Icon(Icons.spa, color: Colors.white, size: 40),
-      label: "Practice",
+      label: "Untils",
     ),
     BottomNavigationBarItem(
       backgroundColor: Colors.black,

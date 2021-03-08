@@ -103,7 +103,7 @@ class _LOSecondPageState extends State<LOSecondPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: new BoxDecoration(color: Colors.grey),
+      decoration: new BoxDecoration(color: Color(0xff333333)),
       child: ListView(
         children: [
           LOSingleTree(

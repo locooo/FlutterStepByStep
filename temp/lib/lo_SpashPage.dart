@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:get/route_manager.dart';
 import 'package:temp/untils/routers/navigatorUntil.dart';
 import 'package:temp/untils/routers/routes.dart';
 
@@ -71,6 +70,7 @@ class _SplashPageState extends State<SplashPage> {
       },
       itemCount: 3,
       loop: false,
+      physics: ClampingScrollPhysics(),
       pagination: new SwiperPagination(),
       // control: new SwiperControl(),
     );

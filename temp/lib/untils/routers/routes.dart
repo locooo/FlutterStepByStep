@@ -121,6 +121,9 @@ class Routes {
   static String loProviderPage = "/lo_ProviderPage";
   static String loProviderChildPage = "/lo_ProviderChildPage";
 
+//Third
+  static String loDioPage = "/lo_DioPage";
+
   static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = Handler(
         handlerFunc: (BuildContext context, Map<String, List<String>> params) {
@@ -262,5 +265,8 @@ class Routes {
     //Provider
     router.define(loProviderPage, handler: loProviderPageHandel);
     router.define(loProviderChildPage, handler: loProviderChildPageHandel);
+
+//Third
+    router.define(loDioPage, handler: loDioPageHandel);
   }
 }
