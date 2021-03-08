@@ -4,6 +4,7 @@ import 'package:dio/dio.dart';
 class LOLogInterceptor extends Interceptor {
   @override
   Future onRequest(RequestOptions options) async {
+    //// 请求发送前处理
     String requestStr = "\n==================== REQUEST ====================\n"
         "- URL:\n${options.baseUrl + options.path}\n";
 
@@ -27,6 +28,7 @@ class LOLogInterceptor extends Interceptor {
 
   @override
   Future onError(DioError err) async {
+    // 当请求失败时做一些预处理
     String errorStr = "\n==================== RESPONSE ====================\n"
         "- URL:\n${err.request.baseUrl + err.request.path}\n"
         "- METHOD: ${err.request.method}\n";
@@ -46,6 +48,7 @@ class LOLogInterceptor extends Interceptor {
 
   @override
   Future onResponse(Response response) async {
+    // 在返回响应数据之前做一些预处理
     String responseStr =
         "\n==================== RESPONSE ====================\n"
         "- URL:\n${response.request.uri}\n";

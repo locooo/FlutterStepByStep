@@ -44,11 +44,11 @@ class LOHttpManager {
     }
   }
 
-  Future request(
+  Future request<T>(
       {LOHttpMethod method,
       String path,
-      Function(T) success,
-      Function(T) error,
+      Function(Response) success,
+      Function(LOErrorEntity) error,
       Map<String, dynamic> params,
       String baseUrl,
       CancelToken cancelToken}) async {
@@ -61,21 +61,13 @@ class LOHttpManager {
       );
 
       if (response != null) {
-        baseResponse = LOBaseResponse<T>.fromJson(response.data);
-        if (baseResponse.status == 1) {
-          success(baseResponse.data);
-        } else {
-          baseResponse.loErrorEntity = LOErrorEntity(
-              status: baseResponse.status, message: baseResponse.msg);
-          error(baseResponse);
-        }
+        success(response);
       } else {
-        baseResponse.loErrorEntity = LOErrorEntity(status: -1, message: "未知错误");
-        error(baseResponse);
+        error(LOErrorEntity.createErrorEntity(
+            LOErrorEntity(status: -1, message: "未知错误")));
       }
     } on DioError catch (e) {
-      baseResponse.loErrorEntity = LOErrorEntity.createErrorEntity(e);
-      error(baseResponse);
+      error(LOErrorEntity.createErrorEntity(e));
     }
   }
 

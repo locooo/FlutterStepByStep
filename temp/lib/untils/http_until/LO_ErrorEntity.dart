@@ -7,7 +7,7 @@ class LOErrorEntity {
   LOErrorEntity({this.status, this.message});
 
   // 错误信息
-  static LOErrorEntity createErrorEntity(DioError error) {
+  static LOErrorEntity createErrorEntity(dynamic error) {
     if (error is DioError) {
       switch (error.type) {
         case DioErrorType.CANCEL:
