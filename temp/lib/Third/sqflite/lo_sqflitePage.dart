@@ -1,6 +1,4 @@
 import 'dart:math';
-
-import 'package:flustars/flustars.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:temp/untils/sqlite/lo_dbManager.dart';

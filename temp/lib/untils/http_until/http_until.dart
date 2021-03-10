@@ -1,6 +1,5 @@
 import 'package:dio/dio.dart';
 import 'package:temp/untils/http_until/LO_ErrorEntity.dart';
-import 'package:temp/untils/http_until/http_logInterceptor.dart';
 import 'package:temp/untils/http_until/lo_baseResponse.dart';
 
 class LOHttpManager {

@@ -17,9 +17,11 @@ class _LOThirdPageState extends State<LOThirdPage> {
     LOFirstPageModel(icon: Icons.adjust, name: "常用三方框架"),
     LOFirstPageModel(icon: Icons.adjust, name: "Dio(网络请求)+Json解析"),
     LOFirstPageModel(icon: Icons.adjust, name: "sqflite"),
+    LOFirstPageModel(icon: Icons.adjust, name: "Hive(key-value)数据库支持对象类型"),
   ];
   List firstRoute = [
     Routes.loDioPage,
+    Routes.loSqflitePage,
     Routes.loSqflitePage,
   ];
 

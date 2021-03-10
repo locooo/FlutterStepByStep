@@ -95,7 +95,7 @@ class LOSqliteManager {
     Batch batch = db.batch();
     batch.execute(LONeedCreatSQ.fatherModelSQ);
     batch.execute(LONeedCreatSQ.childModelSQ);
-    batch.commit();
+    batch.commit(noResult: true);
   }
 
   ///数据库升级
@@ -166,8 +166,7 @@ class LOSqliteManager {
 
   //插入数据2
   static Future<int> rawInsert(String sql, [List<dynamic> arguments]) async {
-    return await _database.rawInsert(
-        'INSERT INTO tableName(name, value, num) VALUES("Civet", 18, 456.7)');
+    return await _database.rawInsert(sql, arguments);
   }
 
   //删除数据
@@ -246,26 +245,3 @@ class LOSqliteManager {
   // }
 
 }
-
-/*
-
-Insert
-int id = await database.insert(‘test’, {'name': 'Civet', 'value': '18', 'num': '456.7'});
-int id = await database.rawInsert('INSERT INTO test(name, value, num) VALUES("Civet", 18, 456.7)');
-
-Delete
-返回值需要注意下：Returns the number of changes made（返回受影响的的数量，即删除的条目数量）。另外，如果没where语句，会清空表格，要特别小心。
-int count = await database.delete('test', where: 'name = ?', whereArgs: ['Civet']);
-int count = await database.rawDelete('DELETE FROM test WHERE name = ?', ['Civet']);
-
-Update
-返回值需要注意下：Returns the number of changes made（返回受影响的的数量）.
-int count = await database.update(
-  'test', 
-  {'name': 'Home', 'value': '20'}
-  where: 'name = ?', 
-  whereArgs: ['Civet']
-);
-
-int count = await database.rawUpdate('UPDATE test SET name = ?, value = ? WHERE name = ?', ['Home', 20, 'Civet']);
-*/

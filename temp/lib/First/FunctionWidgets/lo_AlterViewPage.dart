@@ -39,10 +39,10 @@ class _LOAlterViewPageState extends State<LOAlterViewPage> {
                     this.showMyAlter1(context);
                   },
                 ),
-                RaisedButton(
+                ElevatedButton(
                   child: Text("AlertDialog"),
                   //去除水波纹 Colors.transparent
-                  splashColor: Colors.red,
+                  // splashColor: Colors.red,
                   onPressed: () {
                     this.showMyAlter2(context);
                   },
