@@ -14,11 +14,13 @@ class LOThirdPage extends StatefulWidget {
 
 class _LOThirdPageState extends State<LOThirdPage> {
   List first = [
-    LOFirstPageModel(icon: Icons.adjust, name: "Dio(网络请求)"),
-    LOFirstPageModel(icon: Icons.adjust, name: "Dio"),
+    LOFirstPageModel(icon: Icons.adjust, name: "常用三方框架"),
+    LOFirstPageModel(icon: Icons.adjust, name: "Dio(网络请求)+Json解析"),
+    LOFirstPageModel(icon: Icons.adjust, name: "sqflite"),
   ];
   List firstRoute = [
     Routes.loDioPage,
+    Routes.loSqflitePage,
   ];
 
   @override

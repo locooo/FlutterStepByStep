@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:sp_util/sp_util.dart';
 import 'package:temp/Drawer/lo_drawerPage.dart';
@@ -9,14 +12,17 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:temp/Second/lo_secondPage.dart';
 import 'package:temp/Third/lo_thirdPage.dart';
 import 'package:temp/generated/l10n.dart';
+import 'package:temp/lo_SpashPage.dart';
 import 'package:temp/untils/routers/application.dart';
 import 'package:get/get.dart';
-
+import 'package:connectivity/connectivity.dart';
+import 'package:temp/untils/sqlite/lo_dbManager.dart';
 import 'Second/Provider/lo_Provider_counter.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SpUtil.getInstance();
+  await LOSqliteManager.getInstance();
   Application.initFluroRouter();
   runApp(MyApp());
 }
@@ -24,6 +30,15 @@ void main() async {
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   // int themeIndex;
+  Widget changeIsShowSplashOrNot() {
+    if (SpUtil.getBool("showSplash", defValue: true)) {
+      SpUtil.putBool("showSplash", false);
+      return SplashPage();
+    } else {
+      return MyHomePage();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     // Provider<int>
@@ -55,8 +70,9 @@ class MyApp extends StatelessWidget {
               return;
             },
             locale: languageUntil.toGetCurrentLanguage,
-            // home: MyHomePage(title: "qwqewqewqe"),
+            home: changeIsShowSplashOrNot(),
             onGenerateRoute: Application.router.generator,
+            // initialRoute: ,
             navigatorKey:
                 Get.key, //Get.key.currentState.overlay.context可以全局获取当前context
           );
@@ -75,6 +91,64 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  //网络监测
+  String _connectionStatus = 'Unknown';
+  final Connectivity _connectivity = Connectivity();
+  StreamSubscription<ConnectivityResult> _connectivitySubscription;
+
+  @override
+  void initState() {
+    super.initState();
+    initConnectivity();
+    _connectivitySubscription =
+        _connectivity.onConnectivityChanged.listen(_updateConnectionStatus);
+  }
+
+  @override
+  void dispose() {
+    _connectivitySubscription.cancel();
+    super.dispose();
+  }
+
+  Future<void> initConnectivity() async {
+    ConnectivityResult result = ConnectivityResult.none;
+    // Platform messages may fail, so we use a try/catch PlatformException.
+    try {
+      result = await _connectivity.checkConnectivity();
+    } on PlatformException catch (e) {
+      print(e.toString());
+    }
+
+    // If the widget was removed from the tree while the asynchronous platform
+    // message was in flight, we want to discard the reply rather than calling
+    // setState to update our non-existent appearance.
+    if (!mounted) {
+      return Future.value(null);
+    }
+
+    return _updateConnectionStatus(result);
+  }
+
+  Future<void> _updateConnectionStatus(ConnectivityResult result) async {
+    switch (result) {
+      case ConnectivityResult.wifi:
+        print("wifi");
+        break;
+      case ConnectivityResult.mobile:
+        print("mobile");
+        break;
+
+      case ConnectivityResult.none:
+        setState(() => _connectionStatus = result.toString());
+        print("无网络");
+        break;
+      default:
+        setState(() => _connectionStatus = 'Failed to get connectivity.');
+        print("获取网络状态失败");
+        break;
+    }
+  }
+
   int selectedIndex = 0;
   final pages = [LOFirstPage(), LOSecondPage(), LOThirdPage(), LOSecondPage()];
   List<String> pagesText = ['Basics', 'State', 'Untils', 'Practice'];

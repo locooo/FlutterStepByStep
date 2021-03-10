@@ -13,6 +13,24 @@ class SplashPage extends StatefulWidget {
 
 class _SplashPageState extends State<SplashPage> {
   @override
+  void initState() {
+    super.initState();
+    // Future.delayed(Duration(seconds: 3),
+    //     NavigatorUntil.pushReplacementNamed(context, Routes.home));
+    // _initAsync();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+  }
+
+  void _initAsync() async {
+    //
+    // return;
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Swiper(
       itemBuilder: (BuildContext context, int index) {
