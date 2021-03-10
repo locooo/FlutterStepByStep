@@ -88,25 +88,25 @@ class _LOTestTextFieldPageState extends State<LOTestTextFieldPage> {
                   });
                 },
               ),
-              FlatButton(
+              TextButton(
                 child: Text('FirstTextField'),
-                color: Colors.blue,
+                // color: Colors.blue,
                 onPressed: () {
                   FocusScope.of(context).requestFocus(_focusNode);
                 },
               ),
-              FlatButton(
+              TextButton(
                 child: Text('SecondTextField'),
-                color: Colors.blue,
+                // color: Colors.blue,
                 onPressed: () {
                   FocusScope.of(context).requestFocus(_focusNode1);
                 },
               ),
             ],
           ),
-          FlatButton(
+          TextButton(
             child: Text('退出编辑'),
-            color: Colors.blue,
+            // color: Colors.blue,
             onPressed: () {
               _focusNode.unfocus();
               _focusNode1.unfocus();

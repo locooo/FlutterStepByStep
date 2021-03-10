@@ -7,6 +7,7 @@ part 'lo_stampDetailModel.g.dart';
 class LOStampDetailModel {
   String name;
   List<ColumList> columList;
+  // ignore: non_constant_identifier_names
   Use_result_imgs use_result_imgs;
   //显式关联JSON字段名与Model属性的对应关系,
   // 如下将属性registerDate和register_date字段关联
@@ -22,8 +23,11 @@ class LOStampDetailModel {
 
 @JsonSerializable()
 class ColumList {
+  // ignore: non_constant_identifier_names
   String column_key;
+  // ignore: non_constant_identifier_names
   String column_name;
+  // ignore: non_constant_identifier_names
   String column_value;
   ColumList(this.column_key, this.column_name, this.column_value);
   factory ColumList.fromJson(Map<String, dynamic> json) =>
@@ -32,6 +36,7 @@ class ColumList {
 }
 
 @JsonSerializable()
+// ignore: camel_case_types
 class Use_result_imgs {
   List<Imgs> imgs;
   String address;
@@ -46,7 +51,9 @@ class Use_result_imgs {
 class Imgs {
   String path;
   String fileName;
+  // ignore: non_constant_identifier_names
   String path_thumbnail;
+  // ignore: non_constant_identifier_names
   String seal_id;
   int fileLength;
   Imgs(this.path, this.fileName, this.path_thumbnail, this.seal_id,

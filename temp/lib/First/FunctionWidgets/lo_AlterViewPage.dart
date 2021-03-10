@@ -23,18 +23,18 @@ class _LOAlterViewPageState extends State<LOAlterViewPage> {
           child: SafeArea(
             child: Column(
               children: [
-                RaisedButton(
+                ElevatedButton(
                   child: Text("自定义"),
                   //去除水波纹 Colors.transparent
-                  splashColor: Colors.red,
+                  // splashColor: Colors.red,
                   onPressed: () {
                     this.showMyAlter0(context);
                   },
                 ),
-                RaisedButton(
+                ElevatedButton(
                   child: Text("SimpleDialog"),
                   //去除水波纹 Colors.transparent
-                  splashColor: Colors.red,
+                  // splashColor: Colors.red,
                   onPressed: () {
                     this.showMyAlter1(context);
                   },
@@ -47,18 +47,18 @@ class _LOAlterViewPageState extends State<LOAlterViewPage> {
                     this.showMyAlter2(context);
                   },
                 ),
-                RaisedButton(
+                ElevatedButton(
                   child: Text("showModalBottomSheet"),
                   //去除水波纹 Colors.transparent
-                  splashColor: Colors.red,
+                  // splashColor: Colors.red,
                   onPressed: () {
                     this.showMadalBottom(context);
                   },
                 ),
-                RaisedButton(
+                ElevatedButton(
                   child: Text("showBottomSheet"),
                   //去除水波纹 Colors.transparent
-                  splashColor: Colors.red,
+                  // splashColor: Colors.red,
                   onPressed: () => this
                       ._scaffoldState
                       .currentState
@@ -86,10 +86,10 @@ class _LOAlterViewPageState extends State<LOAlterViewPage> {
                 width: 100,
                 height: 100,
                 color: Colors.black,
-                child: RaisedButton(
+                child: ElevatedButton(
                   child: Text("点我消失"),
                   //去除水波纹 Colors.transparent
-                  splashColor: Colors.red,
+                  // splashColor: Colors.red,
                   onPressed: () {
                     NavigatorUntil.pop(context);
                   },
@@ -147,13 +147,13 @@ class _LOAlterViewPageState extends State<LOAlterViewPage> {
         title: Text('Dialog'),
         content: Text(('Dialog content..')),
         actions: <Widget>[
-          new FlatButton(
+          new ElevatedButton(
             child: new Text("取消"),
             onPressed: () {
               Navigator.of(context).pop();
             },
           ),
-          new FlatButton(
+          new ElevatedButton(
             child: new Text("确定"),
             onPressed: () {
               Navigator.of(context).pop();

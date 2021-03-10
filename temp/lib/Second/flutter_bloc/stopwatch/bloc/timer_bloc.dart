@@ -33,7 +33,6 @@ class TimerBloc extends Bloc<TimerEvent, TimerState> {
     } else if (event is TimeResetEvent) {
       yield* _mapTimerResetToState(event);
     }
-    // TODO: implement mapEventToState
   }
 
   @override

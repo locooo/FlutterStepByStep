@@ -41,6 +41,7 @@ Map<String, dynamic> _$ColumListToJson(ColumList instance) => <String, dynamic>{
       'column_value': instance.column_value,
     };
 
+// ignore: non_constant_identifier_names
 Use_result_imgs _$Use_result_imgsFromJson(Map<String, dynamic> json) {
   return Use_result_imgs(
     (json['imgs'] as List)
@@ -52,6 +53,7 @@ Use_result_imgs _$Use_result_imgsFromJson(Map<String, dynamic> json) {
   );
 }
 
+// ignore: non_constant_identifier_names
 Map<String, dynamic> _$Use_result_imgsToJson(Use_result_imgs instance) =>
     <String, dynamic>{
       'imgs': instance.imgs,

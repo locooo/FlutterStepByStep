@@ -47,21 +47,21 @@ class _LOButtonPageState extends State<LOButtonPage> {
                 onPressed: () {},
               ),
               //风格”凸起“的按钮
-              RaisedButton(
+              ElevatedButton(
                 child: Text("RaisedButton"),
                 //去除水波纹 Colors.transparent
-                splashColor: Colors.red,
+                // splashColor: Colors.red,
                 onPressed: () {},
               ),
 
               //扁平的按钮
-              FlatButton(
+              ElevatedButton(
                 child: Text('FlatButton'),
-                color: Colors.blue,
+                // color: Colors.blue,
                 onPressed: () {},
               ),
               //带边框的按钮
-              OutlineButton(
+              OutlinedButton(
                 child: Text('OutlineButton'),
                 onPressed: () {},
               ),
@@ -78,19 +78,19 @@ class _LOButtonPageState extends State<LOButtonPage> {
               //末端对齐
               ButtonBar(
                 children: <Widget>[
-                  RaisedButton(
+                  ElevatedButton(
                     child: Text("RaisedButton"),
                     onPressed: () {},
                   ),
-                  RaisedButton(
+                  ElevatedButton(
                     child: Text("RaisedButton"),
                     onPressed: () {},
                   ),
-                  RaisedButton(
+                  ElevatedButton(
                     child: Text("RaisedButton"),
                     onPressed: () {},
                   ),
-                  RaisedButton(
+                  ElevatedButton(
                     child: Text("RaisedButton"),
                     onPressed: () {},
                   ),

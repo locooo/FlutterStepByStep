@@ -20,11 +20,11 @@ class LOScopedModelSingleModelPage1 extends StatelessWidget {
           children: [
             Text("${countModel.countInt}"),
             Center(
-              child: new FlatButton(
+              child: new TextButton(
                   onPressed: () {
                     countModel.add();
                   },
-                  color: Colors.blue,
+                  // color: Colors.blue,
                   child: new Text("+")),
             ),
           ],

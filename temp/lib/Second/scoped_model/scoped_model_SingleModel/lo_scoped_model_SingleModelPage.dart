@@ -29,24 +29,24 @@ class LOScopedModelSingleModelPage extends StatelessWidget {
                       child: new Center(
                           child: new Text(model.countInt.toString()))),
                   new Center(
-                    child: new FlatButton(
+                    child: new TextButton(
                         onPressed: () {
                           model.add();
                         },
-                        color: Colors.blue,
+                        // color: Colors.blue,
                         child: new Text("+")),
                   ),
                   Center(
-                    child: FlatButton(
+                    child: TextButton(
                         onPressed: () {
                           NavigatorUntil.push(context,
                               Routes.testLOScopedModelSingleModelPage1);
                         },
-                        color: Colors.blue,
+                        // color: Colors.blue,
                         child: new Text("共享给下一个页面(MaterialApp方式)")),
                   ),
                   new Center(
-                    child: new FlatButton(
+                    child: new TextButton(
                         onPressed: () {
                           NavigatorUntil.push(
                             context,
@@ -56,7 +56,7 @@ class LOScopedModelSingleModelPage extends StatelessWidget {
                             ),
                           );
                         },
-                        color: Colors.blue,
+                        // color: Colors.blue,
                         child: new Text("共享给下一个页面(arguments传值方式)")),
                   ),
                 ],

@@ -25,11 +25,6 @@ class _SplashPageState extends State<SplashPage> {
     super.didChangeDependencies();
   }
 
-  void _initAsync() async {
-    //
-    // return;
-  }
-
   @override
   Widget build(BuildContext context) {
     return Swiper(

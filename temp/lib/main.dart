@@ -92,7 +92,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   //网络监测
-  String _connectionStatus = 'Unknown';
+
   final Connectivity _connectivity = Connectivity();
   StreamSubscription<ConnectivityResult> _connectivitySubscription;
 
@@ -139,11 +139,9 @@ class _MyHomePageState extends State<MyHomePage> {
         break;
 
       case ConnectivityResult.none:
-        setState(() => _connectionStatus = result.toString());
         print("无网络");
         break;
       default:
-        setState(() => _connectionStatus = 'Failed to get connectivity.');
         print("获取网络状态失败");
         break;
     }
