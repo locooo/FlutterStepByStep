@@ -29,7 +29,9 @@ class _LODioPageState extends State<LODioPage> {
                 LOHttpManager().request(
                   method: LOHttpMethod.GET,
                   path: "/applyDetails=0&key=1&key2=2",
-                  success: (data) {},
+                  success: (data) {
+                    print(data.data);
+                  },
                   error: (error) {
                     print(error.message);
                   },

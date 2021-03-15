@@ -18,11 +18,13 @@ class _LOThirdPageState extends State<LOThirdPage> {
     LOFirstPageModel(icon: Icons.adjust, name: "Dio(网络请求)+Json解析"),
     LOFirstPageModel(icon: Icons.adjust, name: "sqflite"),
     LOFirstPageModel(icon: Icons.adjust, name: "Hive(key-value)数据库支持对象类型"),
+    LOFirstPageModel(icon: Icons.adjust, name: "flutter_screenutil屏幕适配"),
   ];
   List firstRoute = [
     Routes.loDioPage,
     Routes.loSqflitePage,
     Routes.loSqflitePage,
+    Routes.loScreenUntilPage
   ];
 
   @override

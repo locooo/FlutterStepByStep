@@ -76,6 +76,7 @@ import 'package:temp/Second/scoped_model/scoped_model_SingleModel/lo_scoped_mode
 import 'package:temp/Second/scoped_model/scoped_model_SingleModel/lo_scoped_model_SingleModelPage1.dart';
 import 'package:temp/Second/scoped_model/scoped_model_SingleModel/lo_scoped_model_SingleModelPage2.dart';
 import 'package:temp/Third/Dio/lo_dioPage.dart';
+import 'package:temp/Third/flutter_screenutil/flutter_screenutilPage.dart';
 import 'package:temp/Third/sqflite/lo_sqflitePage.dart';
 import 'package:temp/lo_SpashPage.dart';
 import 'package:temp/main.dart';
@@ -464,6 +465,11 @@ var loDioPageHandel = Handler(
 var loSqflitePageHandel = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   return LOSqflitePage();
+});
+
+var loScreenUntilPageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOScreenUntilPage();
 });
 
 extension LOBoolParsing on String {

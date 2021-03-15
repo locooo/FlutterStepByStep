@@ -23,9 +23,9 @@ class LOHttpManager {
       );
       _dio = Dio(options);
       // _dio.interceptors.add(LOLogInterceptor());
-      if (bool.fromEnvironment("dart.vm.product") == false) {
-        _dio.interceptors.add(LogInterceptor(responseBody: false));
-      }
+      // if (bool.fromEnvironment("dart.vm.product") == false) {
+      //   _dio.interceptors.add(LogInterceptor(responseBody: false));
+      // }
 
       _dio.interceptors.add(
         InterceptorsWrapper(

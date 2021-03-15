@@ -67,7 +67,7 @@ class _LOContainerPageState extends State<LOContainerPage> {
               ),
               Container(
                 color: Colors.blue,
-                margin: EdgeInsets.all(20.0),
+                margin: EdgeInsets.all(60.0),
                 child: Text(
                     "外部边距marginmarginmarginmarginmarginmarginmarginmarginmarginmarginmarginmarginmarginmarginmarginmarginmarginmarginmarginmarginmarginmarginmargin"),
               ),
@@ -200,7 +200,7 @@ class _LOContainerPageState extends State<LOContainerPage> {
               Container(
                 height: 30,
                 child: Text("下划线UnderlineTabIndicator"),
-                alignment: Alignment.center,
+                alignment: FractionalOffset(0.5, 0.5),
                 decoration: UnderlineTabIndicator(
                     borderSide: BorderSide(width: 2.0, color: Colors.red),
                     insets: EdgeInsets.fromLTRB(10, 0, 0, 0)),

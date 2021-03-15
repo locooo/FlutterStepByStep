@@ -53,7 +53,6 @@ class _LOButtonPageState extends State<LOButtonPage> {
                 // splashColor: Colors.red,
                 onPressed: () {},
               ),
-
               //扁平的按钮
               ElevatedButton(
                 child: Text('FlatButton'),

@@ -25,7 +25,7 @@ class LOGlobalEventBusUntil {
   //添加订阅者
   void on(eventName, EventCallback f) {
     if (eventName == null || f == null) return;
-    _emap[eventName] ??= new List<EventCallback>();
+    _emap[eventName] ??= new List<EventCallback>.empty();
     _emap[eventName].add(f);
   }
 

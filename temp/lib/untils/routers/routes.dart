@@ -124,6 +124,7 @@ class Routes {
 //Third
   static String loDioPage = "/lo_DioPage";
   static String loSqflitePage = "/lo_SqflitePage";
+  static String loScreenUntilPage = "/lo_ScreenUntilPage";
 
   static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = Handler(
@@ -270,5 +271,6 @@ class Routes {
 //Third
     router.define(loDioPage, handler: loDioPageHandel);
     router.define(loSqflitePage, handler: loSqflitePageHandel);
+    router.define(loScreenUntilPage, handler: loScreenUntilPageHandel);
   }
 }
