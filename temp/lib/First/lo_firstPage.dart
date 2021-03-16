@@ -154,6 +154,19 @@ class _LOFirstPageState extends State<LOFirstPage> {
     Routes.testGestureRecognizerPage,
   ];
 
+  List ten = [
+    LOFirstPageModel(icon: Icons.extension, name: "OtherWights(其他weight)"),
+    LOFirstPageModel(icon: Icons.extension, name: "Offstage控制组件隐藏/可见的组件"),
+    LOFirstPageModel(icon: Icons.extension, name: "Visibility控制组件隐藏/可见的组件"),
+    LOFirstPageModel(
+        icon: Icons.extension, name: "Opacity(AnimatedOpacity)控制组件隐藏/可见的组件"),
+  ];
+  List tenthRoute = [
+    Routes.testLOOffStagePage,
+    Routes.testLOVisibilityPage,
+    Routes.testLOOpacityPage,
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -212,6 +225,12 @@ class _LOFirstPageState extends State<LOFirstPage> {
             listData: nine,
             onTap: (int index) {
               NavigatorUntil.push(context, nineRoute[index]);
+            },
+          ),
+          LOSingleTree(
+            listData: ten,
+            onTap: (int index) {
+              NavigatorUntil.push(context, tenthRoute[index]);
             },
           ),
         ],

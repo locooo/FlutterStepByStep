@@ -64,6 +64,11 @@ class Routes {
   static String testGestureDetectorPage = "/lo_TestGestureDetectorPage";
   static String testGestureRecognizerPage = "/lo_TestGestureRecognizerPage";
 
+  //Other
+  static String testLOOffStagePage = "/lo_stagePage";
+  static String testLOVisibilityPage = "/lo_visibilityPage";
+  static String testLOOpacityPage = "/lo_OpacityPage";
+
   //Second
   //fluro
   static String testFluroPushAndPopPage = "/lo_TestFluroPushAndPopPage";
@@ -201,6 +206,11 @@ class Routes {
         handler: testGestureDetectorPageHandel);
     router.define(testGestureRecognizerPage,
         handler: testGestureRecognizerPageHandel);
+
+    //other
+    router.define(testLOOffStagePage, handler: testLOOffStagePageHandel);
+    router.define(testLOVisibilityPage, handler: testLOVisibilityPageHandel);
+    router.define(testLOOpacityPage, handler: testLOOpacityPageHandel);
 
     //Second
     //Fluro

@@ -19,6 +19,9 @@ import 'package:temp/First/Layouts/lo_RowAndColumnPage.dart';
 import 'package:temp/First/Layouts/lo_RowAndColumnPage1.dart';
 import 'package:temp/First/Layouts/lo_StackAndPositionedPage.dart';
 import 'package:temp/First/Layouts/lo_WrapAndFlowPage.dart';
+import 'package:temp/First/UnNomail/lo_offStagePage.dart';
+import 'package:temp/First/UnNomail/lo_opacity.dart';
+import 'package:temp/First/UnNomail/lo_visibilityPage.dart';
 import 'package:temp/First/UpdateUIAsync/lo_FutureBuilderPage.dart';
 import 'package:temp/First/UpdateUIAsync/lo_StreamBuilderPage.dart';
 import 'package:temp/First/UpdateUIAsync/lo_StreamContollerPage.dart';
@@ -311,6 +314,21 @@ var testGestureDetectorPageHandel = Handler(
 var testGestureRecognizerPageHandel = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   return LOGestureRecognizerPage();
+});
+
+//Other
+
+var testLOOffStagePageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOOffStagePage();
+});
+var testLOVisibilityPageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOVisibilityPage();
+});
+var testLOOpacityPageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOOpacityPage();
 });
 
 //Second
