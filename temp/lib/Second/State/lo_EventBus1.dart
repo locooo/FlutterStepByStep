@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:temp/Second/State/lo_EventBusModel.dart';
+import 'package:temp/untils/log/lo_log.dart';
 import 'package:temp/untils/routers/navigatorUntil.dart';
 
 class LOEventBus1 extends StatefulWidget {
@@ -14,6 +15,7 @@ class _LOEventBus1State extends State<LOEventBus1> {
   @override
   void initState() {
     super.initState();
+    LOLog.logger.d("");
   }
 
   @override

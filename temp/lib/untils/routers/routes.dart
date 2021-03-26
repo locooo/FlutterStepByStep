@@ -130,6 +130,8 @@ class Routes {
   static String loDioPage = "/lo_DioPage";
   static String loSqflitePage = "/lo_SqflitePage";
   static String loScreenUntilPage = "/lo_ScreenUntilPage";
+  static String logetwidgetPage = "/lo_getwidgetPage";
+  static String loLOWebPage = "/lo_LOWebPage";
 
   static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = Handler(
@@ -225,9 +227,9 @@ class Routes {
 
     //EventBus
 
-    router.define(testEventBusPage1, handler: testEventBusPageHandel1);
-    router.define(testEventBusPage2, handler: testEventBusPageHandel2);
-    router.define(testEventBusPage3, handler: testEventBusPageHandel3);
+    // router.define(testEventBusPage1, handler: testEventBusPageHandel1);
+    // router.define(testEventBusPage2, handler: testEventBusPageHandel2);
+    // router.define(testEventBusPage3, handler: testEventBusPageHandel3);
     //State
 
     router.define(testSetStatePage, handler: testSetStatePageHandel);
@@ -282,5 +284,7 @@ class Routes {
     router.define(loDioPage, handler: loDioPageHandel);
     router.define(loSqflitePage, handler: loSqflitePageHandel);
     router.define(loScreenUntilPage, handler: loScreenUntilPageHandel);
+    router.define(logetwidgetPage, handler: logetwidgetPageHandel);
+    router.define(loLOWebPage, handler: loLOWebPageHandel);
   }
 }

@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -17,7 +15,7 @@ import 'package:temp/generated/l10n.dart';
 import 'package:temp/lo_SpashPage.dart';
 import 'package:temp/untils/routers/application.dart';
 import 'package:get/get.dart';
-import 'package:connectivity/connectivity.dart';
+// import 'package:connectivity/connectivity.dart';
 import 'package:temp/untils/sqlite/lo_dbManager.dart';
 import 'Second/Provider/lo_Provider_counter.dart';
 

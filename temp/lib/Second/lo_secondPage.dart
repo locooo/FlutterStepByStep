@@ -20,15 +20,6 @@ class _LOSecondPageState extends State<LOSecondPage> {
   List firstRoute = [
     Routes.testFluroPushAndPopPage,
   ];
-
-  List second = [
-    LOFirstPageModel(icon: Icons.adjust, name: "EventBus(事件总线)"),
-    LOFirstPageModel(icon: Icons.adjust, name: "EventBus"),
-  ];
-  List secondRoute = [
-    Routes.testEventBusPage1,
-  ];
-
   List third = [
     LOFirstPageModel(icon: Icons.adjust, name: "状态管理及传值"),
     LOFirstPageModel(icon: Icons.adjust, name: "setState(会强制整个widget重新构建)"),
@@ -110,12 +101,6 @@ class _LOSecondPageState extends State<LOSecondPage> {
             listData: first,
             onTap: (int index) {
               NavigatorUntil.push(context, firstRoute[index]);
-            },
-          ),
-          LOSingleTree(
-            listData: second,
-            onTap: (int index) {
-              NavigatorUntil.push(context, secondRoute[index]);
             },
           ),
           LOSingleTree(

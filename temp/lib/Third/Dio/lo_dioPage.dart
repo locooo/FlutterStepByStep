@@ -5,6 +5,7 @@ import 'package:temp/Third/Dio/lo_stampDetailModel.dart';
 import 'package:temp/untils/http_until/LO_ErrorEntity.dart';
 import 'package:temp/untils/http_until/http_until.dart';
 import 'package:temp/untils/http_until/lo_baseResponse.dart';
+import 'package:temp/untils/log/lo_log.dart';
 
 class LODioPage extends StatefulWidget {
   LODioPage({Key key}) : super(key: key);
@@ -50,7 +51,8 @@ class _LODioPageState extends State<LODioPage> {
                   LOStampDetailModel model =
                       LOStampDetailModel.fromJson(respon.data["data"]);
                   var a = model;
-                  print(a.use_result_imgs.imgs[0].path);
+
+                  LOLog.logger.d(a.use_result_imgs.imgs[0].path);
                 } else {
                   LOErrorEntity ddd = respon;
                   print(ddd.message);

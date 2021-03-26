@@ -54,13 +54,6 @@ class _LOOpacityPageState extends State<LOOpacityPage> {
                   },
                   child: Text(this.isShow ? "隐藏" : "显示"),
                 ),
-                Divider(
-                  height: 10,
-                  indent: 10,
-                  endIndent: 10,
-                  color: Colors.red,
-                  thickness: 100,
-                ),
                 AnimatedOpacity(
                   opacity: this.isShow ? 1.0 : 0.0,
                   duration: Duration(milliseconds: 500),

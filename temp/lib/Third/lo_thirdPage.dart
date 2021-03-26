@@ -19,12 +19,18 @@ class _LOThirdPageState extends State<LOThirdPage> {
     LOFirstPageModel(icon: Icons.adjust, name: "sqflite"),
     LOFirstPageModel(icon: Icons.adjust, name: "Hive(key-value)数据库支持对象类型"),
     LOFirstPageModel(icon: Icons.adjust, name: "flutter_screenutil屏幕适配"),
+    LOFirstPageModel(
+        icon: Icons.adjust,
+        name: "getwidget-UI框架(更多请查看https://www.getwidget.dev/)"),
+    LOFirstPageModel(icon: Icons.adjust, name: "flutter_inappwebview(web)"),
   ];
   List firstRoute = [
     Routes.loDioPage,
     Routes.loSqflitePage,
     Routes.loSqflitePage,
-    Routes.loScreenUntilPage
+    Routes.loScreenUntilPage,
+    Routes.logetwidgetPage,
+    Routes.loLOWebPage,
   ];
 
   @override

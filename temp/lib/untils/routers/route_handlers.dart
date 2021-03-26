@@ -48,9 +48,9 @@ import 'package:temp/First/Widgets_scroll/lo_SingleChildScollViewPage.dart';
 import 'package:temp/LOSetting/Language/LOSetLanguage.dart';
 import 'package:temp/LOSetting/Theme/LOSetTheme.dart';
 import 'package:temp/LOSetting/lo_settingPage.dart';
-import 'package:temp/Second/EventBus/lo_EventBusPage1.dart';
-import 'package:temp/Second/EventBus/lo_EventBusPage2.dart';
-import 'package:temp/Second/EventBus/lo_EventBusPage3.dart';
+// import 'package:temp/Second/EventBus/lo_EventBusPage1.dart';
+// import 'package:temp/Second/EventBus/lo_EventBusPage2.dart';
+// import 'package:temp/Second/EventBus/lo_EventBusPage3.dart';
 import 'package:temp/Second/Fluro_Use/lo_FluroPushAndPopPage.dart';
 import 'package:temp/Second/Fluro_Use/lo_FluroPushAndPopPage1.dart';
 import 'package:temp/Second/Fluro_Use/lo_FluroPushAndPopPage2.dart';
@@ -80,7 +80,9 @@ import 'package:temp/Second/scoped_model/scoped_model_SingleModel/lo_scoped_mode
 import 'package:temp/Second/scoped_model/scoped_model_SingleModel/lo_scoped_model_SingleModelPage2.dart';
 import 'package:temp/Third/Dio/lo_dioPage.dart';
 import 'package:temp/Third/flutter_screenutil/flutter_screenutilPage.dart';
+import 'package:temp/Third/getwidget/lo_getwidgetPage.dart';
 import 'package:temp/Third/sqflite/lo_sqflitePage.dart';
+import 'package:temp/Third/web/lo_webPage.dart';
 import 'package:temp/lo_SpashPage.dart';
 import 'package:temp/main.dart';
 
@@ -353,18 +355,18 @@ var testFluroPushAndPopPageHandel3 = Handler(
   return LOFluroPushAndPopPage3(receivedString: args["1111"]);
 });
 //EventBus
-var testEventBusPageHandel1 = Handler(
-    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
-  return LOEventBusPage1();
-});
-var testEventBusPageHandel2 = Handler(
-    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
-  return LOEventBusPage2();
-});
-var testEventBusPageHandel3 = Handler(
-    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
-  return LOEventBusPage3();
-});
+// var testEventBusPageHandel1 = Handler(
+//     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+//   return LOEventBusPage1();
+// });
+// var testEventBusPageHandel2 = Handler(
+//     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+//   return LOEventBusPage2();
+// });
+// var testEventBusPageHandel3 = Handler(
+//     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+//   return LOEventBusPage3();
+// });
 //SetState
 
 var testSetStatePageHandel = Handler(
@@ -488,6 +490,14 @@ var loSqflitePageHandel = Handler(
 var loScreenUntilPageHandel = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   return LOScreenUntilPage();
+});
+var logetwidgetPageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOgetwidgetPage();
+});
+var loLOWebPageHandel = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return LOWebPage();
 });
 
 extension LOBoolParsing on String {
