@@ -219,7 +219,7 @@ class _MyHomePageState extends State<MyHomePage> {
         maxWidth: MediaQuery.of(context).size.width,
         maxHeight: MediaQuery.of(context).size.height,
       ),
-      Orientation.portrait,
+      orientation: Orientation.portrait,
       designSize: Size(360, 690),
       allowFontScaling: false,
     );
