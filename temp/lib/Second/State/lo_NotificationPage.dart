@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOnotificationPage extends StatefulWidget {
-  LOnotificationPage({Key key}) : super(key: key);
+  LOnotificationPage({Key? key}) : super(key: key);
 
   @override
   _LOnotificationPageState createState() => _LOnotificationPageState();

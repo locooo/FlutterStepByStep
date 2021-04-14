@@ -5,7 +5,7 @@ import 'package:temp/untils/routers/navigatorUntil.dart';
 import 'package:temp/untils/routers/routes.dart';
 
 class LOEventBus extends StatefulWidget {
-  LOEventBus({Key key}) : super(key: key);
+  LOEventBus({Key? key}) : super(key: key);
 
   @override
   _LOEventBusState createState() => _LOEventBusState();
@@ -13,7 +13,7 @@ class LOEventBus extends StatefulWidget {
 
 class _LOEventBusState extends State<LOEventBus> {
   String str = "我是原始值";
-  var subscription;
+  late var subscription;
   @override
   void initState() {
     this.subscription = globalEventBus.on<LOEventBusModel>().listen((event) {

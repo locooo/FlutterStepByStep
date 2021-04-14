@@ -1,4 +1,4 @@
 class LOChildModel {
-  String childString;
-  int childInt;
+  String? childString;
+  int? childInt;
 }

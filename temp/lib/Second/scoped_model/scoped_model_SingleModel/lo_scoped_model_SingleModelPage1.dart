@@ -5,7 +5,7 @@ import 'package:scoped_model/scoped_model.dart';
 import 'lo_scoped_model_SingleModel.dart';
 
 class LOScopedModelSingleModelPage1 extends StatelessWidget {
-  const LOScopedModelSingleModelPage1({Key key}) : super(key: key);
+  const LOScopedModelSingleModelPage1({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

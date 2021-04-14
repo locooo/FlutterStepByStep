@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class LOSettingCell extends StatelessWidget {
   final String name;
-  const LOSettingCell({Key key, @required this.name}) : super(key: key);
+  const LOSettingCell({Key? key, required this.name}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

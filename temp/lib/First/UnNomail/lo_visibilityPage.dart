@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOVisibilityPage extends StatefulWidget {
-  LOVisibilityPage({Key key}) : super(key: key);
+  LOVisibilityPage({Key? key}) : super(key: key);
 
   @override
   _LOVisibilityPageState createState() => _LOVisibilityPageState();

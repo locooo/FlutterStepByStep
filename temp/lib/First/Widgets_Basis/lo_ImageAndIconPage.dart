@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOImageAndIconPage extends StatefulWidget {
-  LOImageAndIconPage({Key key}) : super(key: key);
+  LOImageAndIconPage({Key? key}) : super(key: key);
 
   @override
   _LOImageAndIconPageState createState() => _LOImageAndIconPageState();

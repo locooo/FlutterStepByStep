@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:temp/Second/flutter_GetX/test_getx/logic.dart';
 
 class LOGetXchildPage extends StatelessWidget {
-  const LOGetXchildPage({Key key}) : super(key: key);
+  const LOGetXchildPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

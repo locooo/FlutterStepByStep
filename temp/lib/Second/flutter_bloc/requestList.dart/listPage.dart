@@ -7,7 +7,7 @@ import 'bloc/postmodel.dart';
 import 'bloc/postmodel_bloc.dart';
 
 class LOListPage extends StatelessWidget {
-  const LOListPage({Key key}) : super(key: key);
+  const LOListPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class LOPostmodelView extends StatefulWidget {
 class _LOPostmodelViewState extends State<LOPostmodelView> {
   final _scrollController = ScrollController();
   final _scrollThreshold = 200.0;
-  PostmodelBloc _postBloc;
+  late PostmodelBloc _postBloc;
 
   @override
   void initState() {
@@ -59,20 +59,20 @@ class _LOPostmodelViewState extends State<LOPostmodelView> {
           );
         }
         if (state is PostmodelSuccessState) {
-          if (state.postModels.isEmpty) {
+          if (state.postModels!.isEmpty) {
             return Center(
               child: Text('no posts'),
             );
           }
           return ListView.builder(
             itemBuilder: (BuildContext context, int index) {
-              return index >= state.postModels.length
+              return index >= state.postModels!.length
                   ? BottomLoader()
-                  : PostWidget(post: state.postModels[index]);
+                  : PostWidget(post: state.postModels![index]);
             },
-            itemCount: state.hasReachedMax
-                ? state.postModels.length
-                : state.postModels.length + 1,
+            itemCount: state.hasReachedMax!
+                ? state.postModels!.length
+                : state.postModels!.length + 1,
             controller: _scrollController,
           );
         }
@@ -99,7 +99,7 @@ class _LOPostmodelViewState extends State<LOPostmodelView> {
 class PostWidget extends StatelessWidget {
   final LOPostModel post;
 
-  const PostWidget({Key key, @required this.post}) : super(key: key);
+  const PostWidget({Key? key, required this.post}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -108,9 +108,9 @@ class PostWidget extends StatelessWidget {
         '${post.id}',
         style: TextStyle(fontSize: 10.0),
       ),
-      title: Text(post.title),
+      title: Text(post.title!),
       isThreeLine: true,
-      subtitle: Text(post.body),
+      subtitle: Text(post.body!),
       dense: true,
     );
   }

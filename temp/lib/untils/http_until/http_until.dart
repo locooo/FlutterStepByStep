@@ -3,7 +3,7 @@ import 'package:temp/untils/http_until/LO_ErrorEntity.dart';
 import 'package:temp/untils/http_until/lo_baseResponse.dart';
 
 class LOHttpManager {
-  Dio _dio;
+  Dio? _dio;
   static LOHttpManager _instance = LOHttpManager._internal();
 
   factory LOHttpManager() => _instance;
@@ -27,7 +27,7 @@ class LOHttpManager {
       //   _dio.interceptors.add(LogInterceptor(responseBody: false));
       // }
 
-      _dio.interceptors.add(
+      _dio!.interceptors.add(
         InterceptorsWrapper(onRequest: (options, handler) {
           // Do something before request is sent
           return handler.next(options); //continue
@@ -51,77 +51,80 @@ class LOHttpManager {
   }
 
   Future request<T>(
-      {LOHttpMethod method,
-      String path,
-      Function(Response) success,
-      Function(LOErrorEntity) error,
-      Map<String, dynamic> params,
-      String baseUrl,
-      CancelToken cancelToken}) async {
+      {LOHttpMethod? method,
+      required String path,
+      Function(Response)? success,
+      Function(LOErrorEntity)? error,
+      Map<String, dynamic>? params,
+      String? baseUrl,
+      CancelToken? cancelToken}) async {
     try {
-      Response response = await _dio.request(
+      Response response = await _dio!.request(
         path,
         queryParameters: params,
-        options: Options(method: LOHttpMethodValue[method]),
+        options: Options(method: LOHttpMethodValue[method!]),
         cancelToken: cancelToken ?? cancelToken,
       );
 
+      // ignore: unnecessary_null_comparison
       if (response != null) {
-        success(response);
+        success!(response);
       } else {
-        error(LOErrorEntity.createErrorEntity(
+        error!(LOErrorEntity.createErrorEntity(
             LOErrorEntity(status: -1, message: "未知错误")));
       }
     } on DioError catch (e) {
-      error(LOErrorEntity.createErrorEntity(e));
+      error!(LOErrorEntity.createErrorEntity(e));
     }
   }
 
   Future baseResponseRequest<T>(
-      {LOHttpMethod method,
-      String path,
-      Function(LOBaseResponse) success,
-      Function(LOBaseResponse) error,
-      Map<String, dynamic> params,
-      String baseUrl,
-      CancelToken cancelToken}) async {
-    LOBaseResponse baseResponse;
+      {LOHttpMethod? method,
+      required String path,
+      Function(LOBaseResponse?)? success,
+      Function(LOBaseResponse?)? error,
+      Map<String, dynamic>? params,
+      String? baseUrl,
+      CancelToken? cancelToken}) async {
+    LOBaseResponse? baseResponse;
     try {
-      Response response = await _dio.request(
+      Response response = await _dio!.request(
         path,
         queryParameters: params,
-        options: Options(method: LOHttpMethodValue[method]),
+        options: Options(method: LOHttpMethodValue[method!]),
         cancelToken: cancelToken ?? cancelToken,
       );
 
+      // ignore: unnecessary_null_comparison
       if (response != null) {
         baseResponse = LOBaseResponse<T>.fromJson(response.data);
         if (baseResponse.status == 1) {
-          success(baseResponse.data);
+          success!(baseResponse.data);
         } else {
           baseResponse.loErrorEntity = LOErrorEntity(
               status: baseResponse.status, message: baseResponse.msg);
-          error(baseResponse);
+          error!(baseResponse);
         }
       } else {
-        baseResponse.loErrorEntity = LOErrorEntity(status: -1, message: "未知错误");
-        error(baseResponse);
+        baseResponse!.loErrorEntity =
+            LOErrorEntity(status: -1, message: "未知错误");
+        error!(baseResponse);
       }
     } on DioError catch (e) {
-      baseResponse.loErrorEntity = LOErrorEntity.createErrorEntity(e);
-      error(baseResponse);
+      baseResponse!.loErrorEntity = LOErrorEntity.createErrorEntity(e);
+      error!(baseResponse);
     }
   }
 
   Future noBlockRequest(
-      {LOHttpMethod method,
-      String path,
-      Map<String, dynamic> params,
-      CancelToken cancelToken}) async {
+      {LOHttpMethod? method,
+      required String path,
+      Map<String, dynamic>? params,
+      CancelToken? cancelToken}) async {
     try {
-      Response response = await _dio.request(path,
+      Response response = await _dio!.request(path,
           queryParameters: params,
-          options: Options(method: LOHttpMethodValue[method]));
+          options: Options(method: LOHttpMethodValue[method!]));
       return response;
     } on DioError catch (e) {
       return LOErrorEntity.createErrorEntity(e);
@@ -129,15 +132,16 @@ class LOHttpManager {
   }
 
   Future noBlockBaseResponseRequest<T>(
-      {LOHttpMethod method,
-      String path,
-      Map<String, dynamic> params,
-      CancelToken cancelToken}) async {
-    LOBaseResponse baseResponse;
+      {LOHttpMethod? method,
+      required String path,
+      Map<String, dynamic>? params,
+      CancelToken? cancelToken}) async {
+    LOBaseResponse? baseResponse;
     try {
-      Response response = await _dio.request(path,
+      Response response = await _dio!.request(path,
           queryParameters: params,
-          options: Options(method: LOHttpMethodValue[method]));
+          options: Options(method: LOHttpMethodValue[method!]));
+      // ignore: unnecessary_null_comparison
       if (response != null) {
         baseResponse = LOBaseResponse<T>.fromJson(response.data);
         if (baseResponse.status == 1) {
@@ -148,11 +152,12 @@ class LOHttpManager {
           return baseResponse;
         }
       } else {
-        baseResponse.loErrorEntity = LOErrorEntity(status: -1, message: "未知错误");
+        baseResponse!.loErrorEntity =
+            LOErrorEntity(status: -1, message: "未知错误");
         return baseResponse;
       }
     } on DioError catch (e) {
-      baseResponse.loErrorEntity = LOErrorEntity.createErrorEntity(e);
+      baseResponse!.loErrorEntity = LOErrorEntity.createErrorEntity(e);
       return baseResponse;
     }
   }

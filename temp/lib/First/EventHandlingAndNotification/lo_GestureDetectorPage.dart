@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOGestureDetectorPage extends StatefulWidget {
-  LOGestureDetectorPage({Key key}) : super(key: key);
+  LOGestureDetectorPage({Key? key}) : super(key: key);
 
   @override
   _LOGestureDetectorPageState createState() => _LOGestureDetectorPageState();

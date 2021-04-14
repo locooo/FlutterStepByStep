@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LODecoratedBoxPage extends StatefulWidget {
-  LODecoratedBoxPage({Key key}) : super(key: key);
+  LODecoratedBoxPage({Key? key}) : super(key: key);
 
   @override
   _LODecoratedBoxPageState createState() => _LODecoratedBoxPageState();
@@ -19,7 +19,7 @@ class _LODecoratedBoxPageState extends State<LODecoratedBoxPage> {
         child: DecoratedBox(
             decoration: BoxDecoration(
                 gradient: LinearGradient(
-                    colors: [Colors.red, Colors.orange[700]]), //背景渐变
+                    colors: [Colors.red, Colors.orange[700]!]), //背景渐变
                 borderRadius: BorderRadius.circular(3.0), //3像素圆角
                 boxShadow: [
                   //阴影

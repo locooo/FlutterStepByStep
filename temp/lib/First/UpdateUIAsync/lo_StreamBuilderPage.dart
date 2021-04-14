@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOStreamBuilderPage extends StatefulWidget {
-  LOStreamBuilderPage({Key key}) : super(key: key);
+  LOStreamBuilderPage({Key? key}) : super(key: key);
 
   @override
   _LOStreamBuilderPageState createState() => _LOStreamBuilderPageState();
@@ -39,7 +39,7 @@ class _LOStreamBuilderPageState extends State<LOStreamBuilderPage> {
                 case ConnectionState.done:
                   return Text('Stream已关闭');
               }
-              return null; // unreachable
+// unreachable
             },
           ),
         ),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOBoxsPage extends StatefulWidget {
-  LOBoxsPage({Key key}) : super(key: key);
+  LOBoxsPage({Key? key}) : super(key: key);
 
   @override
   _LOBoxsPageState createState() => _LOBoxsPageState();

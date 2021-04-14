@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'bloc/counterbloc1_bloc.dart';
 
 class LOCounterBloc1ChildPage extends StatelessWidget {
-  const LOCounterBloc1ChildPage({Key key}) : super(key: key);
+  const LOCounterBloc1ChildPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

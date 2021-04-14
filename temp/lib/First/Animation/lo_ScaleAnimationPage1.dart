@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class AnimatedImage extends AnimatedWidget {
-  AnimatedImage({Key key, Animation<double> animation})
+  AnimatedImage({Key? key, required Animation<double> animation})
       : super(key: key, listenable: animation);
   Widget build(BuildContext context) {
-    final Animation<double> animation = listenable;
+    final Animation<double> animation = listenable as Animation<double>;
     return new Center(
       child: Icon(
         Icons.ac_unit,
@@ -15,7 +15,7 @@ class AnimatedImage extends AnimatedWidget {
 }
 
 class LOScaleAnimationPage1 extends StatefulWidget {
-  LOScaleAnimationPage1({Key key}) : super(key: key);
+  LOScaleAnimationPage1({Key? key}) : super(key: key);
 
   @override
   _LOScaleAnimationPage1State createState() => _LOScaleAnimationPage1State();
@@ -23,8 +23,8 @@ class LOScaleAnimationPage1 extends StatefulWidget {
 
 class _LOScaleAnimationPage1State extends State<LOScaleAnimationPage1>
     with SingleTickerProviderStateMixin {
-  Animation<double> animation;
-  AnimationController controller;
+  late Animation<double> animation;
+  late AnimationController controller;
   @override
   initState() {
     super.initState();

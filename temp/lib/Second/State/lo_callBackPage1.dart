@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOCallBackPage1 extends StatefulWidget {
-  LOCallBackPage1({Key key}) : super(key: key);
+  LOCallBackPage1({Key? key}) : super(key: key);
 
   @override
   _LOCallBackPage1State createState() => _LOCallBackPage1State();

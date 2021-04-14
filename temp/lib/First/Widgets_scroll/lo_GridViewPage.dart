@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOGridViewPage extends StatefulWidget {
-  LOGridViewPage({Key key}) : super(key: key);
+  LOGridViewPage({Key? key}) : super(key: key);
 
   @override
   _LOGridViewPageState createState() => _LOGridViewPageState();

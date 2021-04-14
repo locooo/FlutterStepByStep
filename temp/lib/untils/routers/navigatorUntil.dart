@@ -5,16 +5,16 @@ import 'package:temp/untils/routers/application.dart';
 class NavigatorUntil {
   //跳转到某个界面
   static Future push(BuildContext context, String routeName,
-      {Map<String, String> params,
+      {Map<String, String>? params,
       TransitionType transition = TransitionType.native,
-      RouteSettings routeSettings}) {
+      RouteSettings? routeSettings}) {
     String query = "";
     if (params != null) {
       int index = 0;
       for (var key in params.keys) {
         var value;
         if ((params[key]) is String) {
-          value = Uri.encodeComponent(params[key]);
+          value = Uri.encodeComponent(params[key]!);
         } else {
           value = params[key];
         }
@@ -54,7 +54,7 @@ class NavigatorUntil {
 
   //MRAK:POP
   //返回上个界面 可选传值到上个界面和不传
-  static void pop<T extends Object>(BuildContext context, [T result]) {
+  static void pop<T extends Object>(BuildContext context, [T? result]) {
     Navigator.pop<T>(context, result);
   }
 

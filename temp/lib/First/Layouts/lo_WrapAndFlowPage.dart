@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOWrapAndFlowPage extends StatefulWidget {
-  LOWrapAndFlowPage({Key key}) : super(key: key);
+  LOWrapAndFlowPage({Key? key}) : super(key: key);
 
   @override
   _LOWrapAndFlowPageState createState() => _LOWrapAndFlowPageState();

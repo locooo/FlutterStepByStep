@@ -4,8 +4,8 @@ import 'package:scoped_model/scoped_model.dart';
 import 'lo_scoped_model_SingleModel.dart';
 
 class LOScopedModelSingleModelPage2 extends StatelessWidget {
-  final LOScopedSingleModel model;
-  const LOScopedModelSingleModelPage2({Key key, @required this.model})
+  final LOScopedSingleModel? model;
+  const LOScopedModelSingleModelPage2({Key? key, required this.model})
       : super(key: key);
 
   @override
@@ -15,7 +15,7 @@ class LOScopedModelSingleModelPage2 extends StatelessWidget {
           title: Text("LOScopedModelSingleModelPage2"),
         ),
         body: ScopedModel<LOScopedSingleModel>(
-          model: model,
+          model: model!,
           child: ScopedModelDescendant<LOScopedSingleModel>(
             builder: (context, child, model) {
               return Text("${model.countInt}");

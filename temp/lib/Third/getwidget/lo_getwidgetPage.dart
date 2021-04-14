@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:getwidget/getwidget.dart';
 
 class LOgetwidgetPage extends StatefulWidget {
-  LOgetwidgetPage({Key key}) : super(key: key);
+  LOgetwidgetPage({Key? key}) : super(key: key);
 
   @override
   _LOgetwidgetPageState createState() => _LOgetwidgetPageState();

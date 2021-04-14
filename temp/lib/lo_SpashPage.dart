@@ -5,7 +5,7 @@ import 'package:temp/untils/routers/navigatorUntil.dart';
 import 'package:temp/untils/routers/routes.dart';
 
 class SplashPage extends StatefulWidget {
-  SplashPage({Key key}) : super(key: key);
+  SplashPage({Key? key}) : super(key: key);
 
   @override
   _SplashPageState createState() => _SplashPageState();
@@ -37,7 +37,6 @@ class _SplashPageState extends State<SplashPage> {
                 fit: BoxFit.fill,
               );
             }
-            break;
 
           case 1:
             {
@@ -46,7 +45,7 @@ class _SplashPageState extends State<SplashPage> {
                 fit: BoxFit.fill,
               );
             }
-            break;
+
           default:
             {
               return Container(

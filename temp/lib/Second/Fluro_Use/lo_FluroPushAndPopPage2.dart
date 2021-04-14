@@ -4,7 +4,7 @@ import 'package:temp/untils/routers/navigatorUntil.dart';
 import 'package:temp/untils/routers/routes.dart';
 
 class LOFluroPushAndPopPage2 extends StatefulWidget {
-  LOFluroPushAndPopPage2({Key key}) : super(key: key);
+  LOFluroPushAndPopPage2({Key? key}) : super(key: key);
 
   @override
   _LOFluroPushAndPopPage2State createState() => _LOFluroPushAndPopPage2State();

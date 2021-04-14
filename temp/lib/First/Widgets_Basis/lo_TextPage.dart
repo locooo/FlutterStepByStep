@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class LOTestTextPage extends StatelessWidget {
-  const LOTestTextPage({Key key}) : super(key: key);
+  const LOTestTextPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

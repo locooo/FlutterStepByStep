@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LOScreenUntilPage extends StatefulWidget {
-  LOScreenUntilPage({Key key}) : super(key: key);
+  LOScreenUntilPage({Key? key}) : super(key: key);
 
   @override
   _LOScreenUntilPageState createState() => _LOScreenUntilPageState();

@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:temp/untils/log/lo_log.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+// import 'package:webview_flutter/webview_flutter.dart';
 
 class LOWebPage extends StatefulWidget {
-  LOWebPage({Key key}) : super(key: key);
+  LOWebPage({Key? key}) : super(key: key);
 
   @override
   _LOWebPageState createState() => _LOWebPageState();
 }
 
 class _LOWebPageState extends State<LOWebPage> {
-  InAppWebViewController _webContrlller;
+  late InAppWebViewController _webContrlller;
   @override
   void initState() {
     super.initState();
@@ -77,21 +77,22 @@ class _LOWebPageState extends State<LOWebPage> {
                         // it will print: [1, true, [bar, 5], {foo: baz}, {bar: bar_value, baz: baz_value}]
                       });
                 },
-                onLoadStart: (InAppWebViewController contoller, Uri url) {
-                  LOLog.logger.d("onLoadStart:${url.userInfo}");
+                onLoadStart: (InAppWebViewController contoller, Uri? url) {
+                  LOLog.logger.d("onLoadStart:${url!.userInfo}");
                 },
-                onLoadStop: (InAppWebViewController controller, Uri url) async {
-                  LOLog.logger.d("onLoadStop:${url.userInfo}");
+                onLoadStop:
+                    (InAppWebViewController controller, Uri? url) async {
+                  LOLog.logger.d("onLoadStop:${url!.userInfo}");
                 },
                 onProgressChanged:
                     (InAppWebViewController controller, int progress) {
                   LOLog.logger.d("onProgressChanged:$progress");
                 },
-                onLoadError: (InAppWebViewController controller, Uri uri,
+                onLoadError: (InAppWebViewController controller, Uri? uri,
                     int code, String message) {
                   LOLog.logger.d("onLoadError:$message");
                 },
-                onLoadHttpError: (InAppWebViewController controller, Uri uri,
+                onLoadHttpError: (InAppWebViewController controller, Uri? uri,
                     int code, String message) {
                   LOLog.logger.d("onLoadHttpError:$message");
                 },
@@ -106,7 +107,7 @@ class _LOWebPageState extends State<LOWebPage> {
                       '''onReceivedServerTrustAuthRequest:当WebView需要执行服务器信任认证（证书验证）时被触发的事件''');
                   return null;
                 },
-                onPrint: (InAppWebViewController controller, Uri uri) {
+                onPrint: (InAppWebViewController controller, Uri? uri) {
                   LOLog.logger
                       .d('''当window.print()从JavaScript端被调用时被触发的事件，默认行为是取消请求''');
                 }),

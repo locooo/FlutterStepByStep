@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   // int themeIndex;
   Widget changeIsShowSplashOrNot() {
-    if (SpUtil.getBool("showSplash", defValue: true)) {
+    if (SpUtil.getBool("showSplash", defValue: true)!) {
       SpUtil.putBool("showSplash", false);
       return SplashPage();
     } else {
@@ -88,8 +88,8 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
+  MyHomePage({Key? key, this.title}) : super(key: key);
+  final String? title;
 
   @override
   _MyHomePageState createState() => _MyHomePageState();

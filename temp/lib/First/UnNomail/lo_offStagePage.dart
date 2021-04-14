@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOOffStagePage extends StatefulWidget {
-  LOOffStagePage({Key key}) : super(key: key);
+  LOOffStagePage({Key? key}) : super(key: key);
 
   @override
   _LOOffStagePageState createState() => _LOOffStagePageState();

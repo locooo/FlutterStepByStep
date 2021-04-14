@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOPointerEventPage extends StatefulWidget {
-  LOPointerEventPage({Key key}) : super(key: key);
+  LOPointerEventPage({Key? key}) : super(key: key);
 
   @override
   _LOPointerEventPageState createState() => _LOPointerEventPageState();
@@ -10,7 +10,7 @@ class LOPointerEventPage extends StatefulWidget {
 
 class _LOPointerEventPageState extends State<LOPointerEventPage> {
   //定义一个状态，保存当前指针位置
-  PointerEvent _event;
+  PointerEvent? _event;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

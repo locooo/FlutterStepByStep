@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:temp/Second/Provider/lo_Provider_counter.dart';
 
 class LOProviderChildPage extends StatelessWidget {
-  const LOProviderChildPage({Key key}) : super(key: key);
+  const LOProviderChildPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

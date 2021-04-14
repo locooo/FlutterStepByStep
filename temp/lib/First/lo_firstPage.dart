@@ -7,7 +7,7 @@ import 'package:temp/untils/routers/navigatorUntil.dart';
 import 'package:temp/untils/routers/routes.dart';
 
 class LOFirstPage extends StatefulWidget {
-  LOFirstPage({Key key}) : super(key: key);
+  LOFirstPage({Key? key}) : super(key: key);
 
   @override
   _LOFirstPageState createState() => _LOFirstPageState();

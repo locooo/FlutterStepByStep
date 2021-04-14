@@ -6,7 +6,7 @@ import 'package:temp/untils/routers/navigatorUntil.dart';
 import 'package:temp/untils/routers/routes.dart';
 
 class LOSecondPage extends StatefulWidget {
-  LOSecondPage({Key key}) : super(key: key);
+  LOSecondPage({Key? key}) : super(key: key);
 
   @override
   _LOSecondPageState createState() => _LOSecondPageState();

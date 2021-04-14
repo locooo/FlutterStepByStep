@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOSliverAppbarPage extends StatefulWidget {
-  LOSliverAppbarPage({Key key}) : super(key: key);
+  LOSliverAppbarPage({Key? key}) : super(key: key);
 
   @override
   _LOSliverAppbarPageState createState() => _LOSliverAppbarPageState();

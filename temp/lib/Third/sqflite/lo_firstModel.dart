@@ -1,8 +1,8 @@
 class LOFatherModel {
-  String stringValue;
-  int intValue;
-  bool boolValue;
-  double doubleValue;
+  String? stringValue;
+  int? intValue;
+  bool? boolValue;
+  double? doubleValue;
 }
 /*
 NULL

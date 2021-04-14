@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -8,7 +10,7 @@ import 'package:temp/untils/http_until/lo_baseResponse.dart';
 import 'package:temp/untils/log/lo_log.dart';
 
 class LODioPage extends StatefulWidget {
-  LODioPage({Key key}) : super(key: key);
+  LODioPage({Key? key}) : super(key: key);
 
   @override
   _LODioPageState createState() => _LODioPageState();
@@ -52,7 +54,7 @@ class _LODioPageState extends State<LODioPage> {
                       LOStampDetailModel.fromJson(respon.data["data"]);
                   var a = model;
 
-                  LOLog.logger.d(a.use_result_imgs.imgs[0].path);
+                  LOLog.logger.d(a.use_result_imgs!.imgs![0].path);
                 } else {
                   LOErrorEntity ddd = respon;
                   print(ddd.message);
@@ -62,17 +64,18 @@ class _LODioPageState extends State<LODioPage> {
             TextButton(
               child: Text("noBlockBaseResponseRequest"),
               onPressed: () async {
-                LOBaseResponse respon = await LOHttpManager()
-                    .noBlockBaseResponseRequest(
-                        method: LOHttpMethod.GET,
-                        path: "/applyDetails=0&key=1&key2=2",
-                        params: {"kkkkkk": "kkkkkkkkkk"});
+                LOBaseResponse respon = await (LOHttpManager()
+                        .noBlockBaseResponseRequest(
+                            method: LOHttpMethod.GET,
+                            path: "/applyDetails=0&key=1&key2=2",
+                            params: {"kkkkkk": "kkkkkkkkkk"})
+                    as FutureOr<LOBaseResponse<dynamic>>);
                 if (respon.loErrorEntity == null) {
                   LOStampDetailModel model =
                       LOStampDetailModel.fromJson(respon.data);
-                  print(model.use_result_imgs.imgs[0].path);
+                  print(model.use_result_imgs!.imgs![0].path);
                 } else {
-                  print(respon.loErrorEntity.message);
+                  print(respon.loErrorEntity!.message);
                 }
               },
             ),

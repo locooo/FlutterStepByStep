@@ -6,7 +6,7 @@ import 'package:temp/Second/flutter_bloc/stopwatch/bloc/timer_bloc.dart';
 import '../ticket.dart';
 
 class LOTimerPage extends StatelessWidget {
-  const LOTimerPage({Key key}) : super(key: key);
+  const LOTimerPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -79,7 +79,7 @@ class Actions extends StatelessWidget {
   }
 
   List<Widget> _mapStateToActionButtons({
-    TimerBloc timerBloc,
+    required TimerBloc timerBloc,
   }) {
     final TimerState currentState = timerBloc.state;
     if (currentState is TimerInitial) {

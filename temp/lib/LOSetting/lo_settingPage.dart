@@ -5,7 +5,7 @@ import 'package:temp/untils/routers/navigatorUntil.dart';
 import 'package:temp/untils/routers/routes.dart';
 
 class LOSettingPage extends StatelessWidget {
-  const LOSettingPage({Key key}) : super(key: key);
+  const LOSettingPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

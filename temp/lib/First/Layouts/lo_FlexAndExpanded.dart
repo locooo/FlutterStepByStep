@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOFlexAndExpandedPage extends StatefulWidget {
-  LOFlexAndExpandedPage({Key key}) : super(key: key);
+  LOFlexAndExpandedPage({Key? key}) : super(key: key);
 
   @override
   _LOFlexAndExpandedPageState createState() => _LOFlexAndExpandedPageState();

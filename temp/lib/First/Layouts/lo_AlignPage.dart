@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOAlignPage extends StatefulWidget {
-  LOAlignPage({Key key}) : super(key: key);
+  LOAlignPage({Key? key}) : super(key: key);
 
   @override
   _LOAlignPageState createState() => _LOAlignPageState();

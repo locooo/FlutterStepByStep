@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOSetStatePage extends StatefulWidget {
-  LOSetStatePage({Key key}) : super(key: key);
+  LOSetStatePage({Key? key}) : super(key: key);
 
   @override
   _LOSetStatePageState createState() => _LOSetStatePageState();

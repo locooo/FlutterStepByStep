@@ -8,8 +8,8 @@ import 'lo_firstPageModel.dart';
 
 class LOSingleTree extends StatefulWidget {
   final List listData;
-  final void Function(int index) onTap;
-  LOSingleTree({Key key, @required this.listData, this.onTap})
+  final void Function(int index)? onTap;
+  LOSingleTree({Key? key, required this.listData, this.onTap})
       : super(key: key);
   @override
   _LOSingleTreeState createState() => _LOSingleTreeState();
@@ -46,7 +46,7 @@ class _LOSingleTreeState extends State<LOSingleTree> {
                     ),
                     Expanded(
                       child: Text(
-                        singleModel.name,
+                        singleModel.name!,
                         textAlign: TextAlign.start,
                         style: TextStyle(
                             color: Colors.white, fontWeight: FontWeight.bold),
@@ -86,7 +86,7 @@ class _LOSingleTreeState extends State<LOSingleTree> {
                 ),
               ),
               onTap: () {
-                widget.onTap(index - 1);
+                widget.onTap!(index - 1);
               },
             );
           }

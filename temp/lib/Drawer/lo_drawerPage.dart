@@ -7,7 +7,7 @@ import 'package:temp/untils/routers/routes.dart';
 import 'package:get/get.dart';
 
 class LODrawerPage extends StatefulWidget {
-  LODrawerPage({Key key}) : super(key: key);
+  LODrawerPage({Key? key}) : super(key: key);
 
   @override
   _LODrawerPageState createState() => _LODrawerPageState();
@@ -31,8 +31,8 @@ class _LODrawerPageState extends State<LODrawerPage> {
               child: GestureDetector(
                 behavior: HitTestBehavior.opaque,
                 onTap: () async {
-                  NavigatorUntil.push(
-                      Get.key.currentState.overlay.context, Routes.settingPage);
+                  NavigatorUntil.push(Get.key.currentState!.overlay!.context,
+                      Routes.settingPage);
                 },
                 child: Center(
                   child: Text(

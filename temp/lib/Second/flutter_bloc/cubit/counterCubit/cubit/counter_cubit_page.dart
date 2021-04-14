@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'counter_cubit.dart';
 
 class LOCounterCubitPage extends StatelessWidget {
-  const LOCounterCubitPage({Key key}) : super(key: key);
+  const LOCounterCubitPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -23,7 +23,7 @@ class LOCounterCubitPage extends StatelessWidget {
 }
 
 class LOCounterCubitPageView extends StatelessWidget {
-  const LOCounterCubitPageView({Key key}) : super(key: key);
+  const LOCounterCubitPageView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

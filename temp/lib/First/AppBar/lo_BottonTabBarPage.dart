@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOBottomNavigationBarPage extends StatefulWidget {
-  LOBottomNavigationBarPage({Key key}) : super(key: key);
+  LOBottomNavigationBarPage({Key? key}) : super(key: key);
 
   @override
   _LOBottomNavigationBarPageState createState() =>
@@ -11,7 +11,7 @@ class LOBottomNavigationBarPage extends StatefulWidget {
 
 class _LOBottomNavigationBarPageState extends State<LOBottomNavigationBarPage>
     with SingleTickerProviderStateMixin {
-  TabController _tabController;
+  TabController? _tabController;
 
   static const _kTabPages = <Widget>[
     Center(child: Icon(Icons.cloud, size: 64.0, color: Colors.teal)),

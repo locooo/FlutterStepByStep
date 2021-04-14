@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOTestTextFieldPage extends StatefulWidget {
-  LOTestTextFieldPage({Key key}) : super(key: key);
+  LOTestTextFieldPage({Key? key}) : super(key: key);
 
   @override
   _LOTestTextFieldPageState createState() => _LOTestTextFieldPageState();

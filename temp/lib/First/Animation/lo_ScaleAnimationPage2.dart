@@ -4,18 +4,18 @@ import 'package:flutter/widgets.dart';
 class GrowTransition extends StatelessWidget {
   GrowTransition({this.child, this.animation});
 
-  final Widget child;
-  final Animation<double> animation;
+  final Widget? child;
+  final Animation<double>? animation;
 
   Widget build(BuildContext context) {
     return new Center(
       child: new AnimatedBuilder(
-          animation: animation,
-          builder: (BuildContext context, Widget child) {
+          animation: animation!,
+          builder: (BuildContext context, Widget? child) {
             return new Container(
                 color: Colors.black,
-                height: animation.value,
-                width: animation.value,
+                height: animation!.value,
+                width: animation!.value,
                 child: child);
           },
           child: child),
@@ -24,7 +24,7 @@ class GrowTransition extends StatelessWidget {
 }
 
 class LOScaleAnimationPage2 extends StatefulWidget {
-  LOScaleAnimationPage2({Key key}) : super(key: key);
+  LOScaleAnimationPage2({Key? key}) : super(key: key);
 
   @override
   _LOScaleAnimationPage2State createState() => _LOScaleAnimationPage2State();
@@ -32,8 +32,8 @@ class LOScaleAnimationPage2 extends StatefulWidget {
 
 class _LOScaleAnimationPage2State extends State<LOScaleAnimationPage2>
     with SingleTickerProviderStateMixin {
-  Animation<double> animation;
-  AnimationController controller;
+  Animation<double>? animation;
+  late AnimationController controller;
   @override
   void initState() {
     super.initState();
@@ -49,7 +49,7 @@ class _LOScaleAnimationPage2State extends State<LOScaleAnimationPage2>
     //     print("animation");
     //   });
     // });
-    animation.addStatusListener((status) {
+    animation!.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
         //动画执行结束时反向执行动画
         controller.reverse();

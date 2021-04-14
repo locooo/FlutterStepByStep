@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOSingleChildScrollViewPage extends StatefulWidget {
-  LOSingleChildScrollViewPage({Key key}) : super(key: key);
+  LOSingleChildScrollViewPage({Key? key}) : super(key: key);
 
   @override
   _LOSingleChildScrollViewPageState createState() =>

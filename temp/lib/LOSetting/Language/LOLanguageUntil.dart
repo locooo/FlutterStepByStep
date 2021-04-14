@@ -8,8 +8,8 @@ class LOLanguageUntil extends ChangeNotifier {
 
 //S.load(Locale('zh', 'CN');?????????
 
-  int _languageIndex;
-  int get languageIndex {
+  int? _languageIndex;
+  int? get languageIndex {
     if (_languageIndex == null) {
       _languageIndex = SpUtil.getInt('LOLanguage', defValue: 0);
     }
@@ -22,17 +22,17 @@ class LOLanguageUntil extends ChangeNotifier {
     notifyListeners();
   }
 
-  Locale get toGetCurrentLanguage {
+  Locale? get toGetCurrentLanguage {
     if (this.languageIndex == null || this.languageIndex == 0) {
       return null;
     } else {
       switch (_languageIndex) {
         case 0:
           return null;
-          break;
+
         case 1:
           return Locale('zh', 'CN');
-          break;
+
         default:
           return Locale('en');
       }

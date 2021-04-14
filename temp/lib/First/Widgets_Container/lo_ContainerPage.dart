@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOContainerPage extends StatefulWidget {
-  LOContainerPage({Key key}) : super(key: key);
+  LOContainerPage({Key? key}) : super(key: key);
 
   @override
   _LOContainerPageState createState() => _LOContainerPageState();

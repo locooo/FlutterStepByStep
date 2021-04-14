@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LOCallBackPage extends StatefulWidget {
-  LOCallBackPage({Key key}) : super(key: key);
+  LOCallBackPage({Key? key}) : super(key: key);
 
   @override
   _LOCallBackPageState createState() => _LOCallBackPageState();
@@ -58,13 +58,13 @@ typedef SexFunc = void Function(String sex);
 typedef AgeFunc(int age);
 
 class LOCallBackWidget extends StatelessWidget {
-  final SexFunc sexCallBack;
-  final AgeFunc ageCallBack;
+  final SexFunc? sexCallBack;
+  final AgeFunc? ageCallBack;
 
-  final VoidCallback firstNameCallBack;
-  final ValueSetter<String> secondNameCallBack;
+  final VoidCallback? firstNameCallBack;
+  final ValueSetter<String>? secondNameCallBack;
   const LOCallBackWidget(
-      {Key key,
+      {Key? key,
       this.sexCallBack,
       this.ageCallBack,
       this.firstNameCallBack,
@@ -80,7 +80,7 @@ class LOCallBackWidget extends StatelessWidget {
           child: TextButton(
             child: Text("functionSexCallBack"),
             onPressed: () {
-              sexCallBack("男");
+              sexCallBack!("男");
             },
           ),
         ),
@@ -89,7 +89,7 @@ class LOCallBackWidget extends StatelessWidget {
           child: TextButton(
             child: Text("functionAgeCallBack"),
             onPressed: () {
-              ageCallBack(18);
+              ageCallBack!(18);
             },
           ),
         ),
@@ -98,7 +98,7 @@ class LOCallBackWidget extends StatelessWidget {
           child: TextButton(
             child: Text("VoidCallBack"),
             onPressed: () {
-              firstNameCallBack();
+              firstNameCallBack!();
             },
           ),
         ),
@@ -107,7 +107,7 @@ class LOCallBackWidget extends StatelessWidget {
           child: TextButton(
             child: Text("ValueChanged_CallBack"),
             onPressed: () {
-              secondNameCallBack("ValueChanged_CallBack");
+              secondNameCallBack!("ValueChanged_CallBack");
             },
           ),
         ),

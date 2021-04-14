@@ -54,9 +54,9 @@ class LOThemeUntil extends ChangeNotifier {
     },
   };
 
-  int _themeImdex;
+  int? _themeImdex;
 
-  int get themeIndex {
+  int? get themeIndex {
     if (_themeImdex == null) {
       _themeImdex = SpUtil.getInt("LOTHEME", defValue: 0);
     }

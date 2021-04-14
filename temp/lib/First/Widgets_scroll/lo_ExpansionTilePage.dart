@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOExpansionTilePage extends StatefulWidget {
-  LOExpansionTilePage({Key key}) : super(key: key);
+  LOExpansionTilePage({Key? key}) : super(key: key);
 
   @override
   _LOExpansionTilePageState createState() => _LOExpansionTilePageState();

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOInkWellPage extends StatefulWidget {
-  LOInkWellPage({Key key}) : super(key: key);
+  LOInkWellPage({Key? key}) : super(key: key);
 
   @override
   _LOInkWellPageState createState() => _LOInkWellPageState();

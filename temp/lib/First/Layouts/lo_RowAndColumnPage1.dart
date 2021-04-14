@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LORowAndColumnPage1 extends StatefulWidget {
-  LORowAndColumnPage1({Key key}) : super(key: key);
+  LORowAndColumnPage1({Key? key}) : super(key: key);
 
   @override
   _LORowAndColumnPage1State createState() => _LORowAndColumnPage1State();

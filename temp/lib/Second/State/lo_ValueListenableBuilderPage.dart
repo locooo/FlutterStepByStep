@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOValueListenableBuilderpage extends StatefulWidget {
-  LOValueListenableBuilderpage({Key key}) : super(key: key);
+  LOValueListenableBuilderpage({Key? key}) : super(key: key);
 
   @override
   _LOValueListenableBuilderpageState createState() =>
@@ -42,7 +42,7 @@ class _LOValueListenableBuilderpageState
             children: [
               ValueListenableBuilder(
                 valueListenable: _notifier,
-                builder: (context, vlaue, child) {
+                builder: (context, dynamic vlaue, child) {
                   return Column(
                     children: [
                       Container(
@@ -51,7 +51,7 @@ class _LOValueListenableBuilderpageState
                         color: Colors.red,
                         child: Text("我是谁${this._counter}"),
                       ),
-                      child, //只有一部分依赖value值的话不依赖的可以放到child中
+                      child!, //只有一部分依赖value值的话不依赖的可以放到child中
                     ],
                   );
                 },

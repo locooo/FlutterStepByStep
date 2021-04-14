@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOAppBarBasicPage extends StatefulWidget {
-  LOAppBarBasicPage({Key key}) : super(key: key);
+  LOAppBarBasicPage({Key? key}) : super(key: key);
 
   @override
   _LOAppBarBasicPageState createState() => _LOAppBarBasicPageState();

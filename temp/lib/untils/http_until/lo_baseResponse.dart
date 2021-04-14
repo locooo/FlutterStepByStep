@@ -1,11 +1,11 @@
 import 'package:temp/untils/http_until/LO_ErrorEntity.dart';
 
 class LOBaseResponse<T> {
-  int status;
-  String msg;
-  String errorCode;
-  T data;
-  LOErrorEntity loErrorEntity;
+  int? status;
+  String? msg;
+  String? errorCode;
+  T? data;
+  LOErrorEntity? loErrorEntity;
 
   LOBaseResponse(
       {this.status, this.msg, this.errorCode, this.data, this.loErrorEntity});
@@ -22,7 +22,7 @@ class LOBaseResponse<T> {
 }
 
 class LOBaseResponseFactory {
-  static T changeJsonToT<T>(json) {
+  static T? changeJsonToT<T>(json) {
     if (json == null) {
       return null;
     } else {

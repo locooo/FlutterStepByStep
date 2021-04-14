@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class LOSwitchAndCheckBoxPage extends StatefulWidget {
-  LOSwitchAndCheckBoxPage({Key key}) : super(key: key);
+  LOSwitchAndCheckBoxPage({Key? key}) : super(key: key);
 
   @override
   _LOSwitchAndCheckBoxPageState createState() =>

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOOpacityPage extends StatefulWidget {
-  LOOpacityPage({Key key}) : super(key: key);
+  LOOpacityPage({Key? key}) : super(key: key);
 
   @override
   _LOOpacityPageState createState() => _LOOpacityPageState();

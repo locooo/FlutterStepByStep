@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class LOThemeSelected extends StatefulWidget {
   final bool isSelecteded;
-  final Color color;
+  final Color? color;
 
-  LOThemeSelected({Key key, @required this.isSelecteded, @required this.color})
+  LOThemeSelected({Key? key, required this.isSelecteded, required this.color})
       : super(key: key);
 
   @override

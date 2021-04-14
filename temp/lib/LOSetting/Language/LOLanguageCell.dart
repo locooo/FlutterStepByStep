@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class LOLanguageCell extends StatefulWidget {
   final String name;
   final bool isSelected;
-  LOLanguageCell({Key key, @required this.name, @required this.isSelected})
+  LOLanguageCell({Key? key, required this.name, required this.isSelected})
       : super(key: key);
 
   @override

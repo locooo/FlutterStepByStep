@@ -3,16 +3,16 @@ import 'package:event_bus/event_bus.dart';
 typedef void EventCallback(event);
 
 class LOGlobalEventBusUntil {
-  EventBus eventBus;
-  factory LOGlobalEventBusUntil() => _getInstance();
-  static LOGlobalEventBusUntil get instance => _getInstance();
-  static LOGlobalEventBusUntil _instance;
+  EventBus? eventBus;
+  factory LOGlobalEventBusUntil() => _getInstance()!;
+  static LOGlobalEventBusUntil? get instance => _getInstance();
+  static LOGlobalEventBusUntil? _instance;
   LOGlobalEventBusUntil._internal() {
     // 初始化
     eventBus = new EventBus();
   }
 
-  static LOGlobalEventBusUntil _getInstance() {
+  static LOGlobalEventBusUntil? _getInstance() {
     if (_instance == null) {
       _instance = new LOGlobalEventBusUntil._internal();
     }
@@ -20,17 +20,17 @@ class LOGlobalEventBusUntil {
   }
 
   //保存事件订阅者队列，key:事件名(id)，value: 对应事件的订阅者队列
-  var _emap = new Map<Object, List<EventCallback>>();
+  var _emap = new Map<Object, List<EventCallback>?>();
 
   //添加订阅者
   void on(eventName, EventCallback f) {
-    if (eventName == null || f == null) return;
+    if (eventName == null) return;
     _emap[eventName] ??= new List<EventCallback>.empty();
-    _emap[eventName].add(f);
+    _emap[eventName]!.add(f);
   }
 
   //移除订阅者
-  void off(eventName, [EventCallback f]) {
+  void off(eventName, [EventCallback? f]) {
     var list = _emap[eventName];
     if (eventName == null || list == null) return;
     if (f == null) {

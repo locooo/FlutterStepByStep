@@ -7,7 +7,7 @@ import 'package:temp/untils/routers/routes.dart';
 import 'mobx_counter.dart';
 
 class LOMobxCounterPage extends StatefulWidget {
-  LOMobxCounterPage({Key key}) : super(key: key);
+  LOMobxCounterPage({Key? key}) : super(key: key);
 
   @override
   _LOMobxCounterPageState createState() => _LOMobxCounterPageState();

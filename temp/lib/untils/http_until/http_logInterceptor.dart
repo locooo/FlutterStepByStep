@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:flutter/gestures.dart';
+// import 'package:flutter/gestures.dart';
 
 ///日志拦截器
 class LOLogInterceptor extends Interceptor {
@@ -36,10 +36,10 @@ class LOLogInterceptor extends Interceptor {
         "- METHOD: ${err.requestOptions.method}\n";
 
     errorStr +=
-        "- HEADER:\n${err.response.headers.map.mapToStructureString()}\n";
-    if (err.response != null && err.response.data != null) {
+        "- HEADER:\n${err.response!.headers.map.mapToStructureString()}\n";
+    if (err.response != null && err.response!.data != null) {
       print('╔ ${err.type.toString()}');
-      errorStr += "- ERROR:\n${_parseResponse(err.response)}\n";
+      errorStr += "- ERROR:\n${_parseResponse(err.response!)}\n";
     } else {
       errorStr += "- ERRORTYPE: ${err.type}\n";
       errorStr += "- MSG: ${err.message}\n";

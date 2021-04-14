@@ -22,7 +22,7 @@ class TestGetxPage extends StatelessWidget {
             children: [
               Obx(
                 () => Text(
-                  '共享的计数器${state.getxInt.value}',
+                  '共享的计数器${state.getxInt!.value}',
                 ),
               ),
               TextButton(

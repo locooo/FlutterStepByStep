@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOTextIconCell extends StatelessWidget {
-  final String name;
+  final String? name;
 
-  const LOTextIconCell({Key key, this.name}) : super(key: key);
+  const LOTextIconCell({Key? key, this.name}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,7 +14,7 @@ class LOTextIconCell extends StatelessWidget {
           width: 43,
         ),
         Expanded(
-          child: Text(this.name, style: TextStyle(color: Colors.white)),
+          child: Text(this.name!, style: TextStyle(color: Colors.white)),
           flex: 1,
         ),
         Padding(

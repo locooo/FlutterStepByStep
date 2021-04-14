@@ -5,7 +5,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'mobx_counter.dart';
 
 class LOMobxCounterChildPage extends StatelessWidget {
-  const LOMobxCounterChildPage({Key key}) : super(key: key);
+  const LOMobxCounterChildPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

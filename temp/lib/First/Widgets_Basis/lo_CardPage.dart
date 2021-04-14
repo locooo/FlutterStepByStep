@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOCardPage extends StatefulWidget {
-  LOCardPage({Key key}) : super(key: key);
+  LOCardPage({Key? key}) : super(key: key);
 
   @override
   _LOCardPageState createState() => _LOCardPageState();

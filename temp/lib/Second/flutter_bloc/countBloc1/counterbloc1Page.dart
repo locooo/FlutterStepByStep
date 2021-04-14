@@ -11,7 +11,7 @@ import 'package:temp/untils/routers/navigatorUntil.dart';
 import 'package:temp/untils/routers/routes.dart';
 
 class LOCounterBloc1Page extends StatelessWidget {
-  const LOCounterBloc1Page({Key key}) : super(key: key);
+  const LOCounterBloc1Page({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +80,7 @@ class LOCounterBloc1Page extends StatelessWidget {
 }
 
 class LOCounterBloc1PageView extends StatelessWidget {
-  const LOCounterBloc1PageView({Key key}) : super(key: key);
+  const LOCounterBloc1PageView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Column(

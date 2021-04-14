@@ -5,7 +5,7 @@ import 'package:temp/untils/log/lo_log.dart';
 import 'package:temp/untils/routers/navigatorUntil.dart';
 
 class LOEventBus1 extends StatefulWidget {
-  LOEventBus1({Key key}) : super(key: key);
+  LOEventBus1({Key? key}) : super(key: key);
 
   @override
   _LOEventBus1State createState() => _LOEventBus1State();

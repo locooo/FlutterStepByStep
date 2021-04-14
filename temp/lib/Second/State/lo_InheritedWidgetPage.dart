@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOInheritedWidgetpage extends StatefulWidget {
-  LOInheritedWidgetpage({Key key}) : super(key: key);
+  LOInheritedWidgetpage({Key? key}) : super(key: key);
 
   @override
   _LOInheritedWidgetpageState createState() => _LOInheritedWidgetpageState();
@@ -39,14 +39,14 @@ class _LOInheritedWidgetpageState extends State<LOInheritedWidgetpage> {
 }
 
 class ParentLOInheritedWidget extends InheritedWidget {
-  ParentLOInheritedWidget({Key key, this.data, this.child})
+  ParentLOInheritedWidget({Key? key, this.data, required this.child})
       : super(key: key, child: child);
 
-  final int data; //需要在子树中共享的数据
+  final int? data; //需要在子树中共享的数据
   final Widget child;
 
   //定义一个便捷方法，方便子树中的widget获取共享数据
-  static ParentLOInheritedWidget of(BuildContext context) {
+  static ParentLOInheritedWidget? of(BuildContext context) {
     return context
         .dependOnInheritedWidgetOfExactType<ParentLOInheritedWidget>();
   }
@@ -60,7 +60,7 @@ class ParentLOInheritedWidget extends InheritedWidget {
 }
 
 class ChildLOInheritedWidget extends StatefulWidget {
-  ChildLOInheritedWidget({Key key}) : super(key: key);
+  ChildLOInheritedWidget({Key? key}) : super(key: key);
 
   @override
   _ChildLOInheritedWidgetState createState() => _ChildLOInheritedWidgetState();
@@ -70,7 +70,7 @@ class _ChildLOInheritedWidgetState extends State<ChildLOInheritedWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text(ParentLOInheritedWidget.of(context).data.toString()),
+      child: Text(ParentLOInheritedWidget.of(context)!.data.toString()),
     );
   }
 }

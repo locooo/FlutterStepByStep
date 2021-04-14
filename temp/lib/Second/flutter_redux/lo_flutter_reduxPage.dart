@@ -7,7 +7,7 @@ import 'package:temp/untils/routers/navigatorUntil.dart';
 import 'package:temp/untils/routers/routes.dart';
 
 class LOReduxPage extends StatelessWidget {
-  LOReduxPage({Key key}) : super(key: key);
+  LOReduxPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,13 +20,13 @@ class LOReduxPage extends StatelessWidget {
 }
 
 class LOFlutterReduxPage extends StatelessWidget {
-  const LOFlutterReduxPage({Key key, this.store}) : super(key: key);
-  final Store<LOReduxCountState> store;
+  const LOFlutterReduxPage({Key? key, this.store}) : super(key: key);
+  final Store<LOReduxCountState>? store;
 
   @override
   Widget build(BuildContext context) {
     return StoreProvider<LOReduxCountState>(
-      store: store,
+      store: store!,
       child: MaterialApp(
         home: Scaffold(
           appBar: AppBar(
@@ -35,7 +35,7 @@ class LOFlutterReduxPage extends StatelessWidget {
           body: Column(
             children: [
               Container(
-                child: Text("${store.state.count}"),
+                child: Text("${store!.state.count}"),
               ),
               StoreConnector<LOReduxCountState, String>(
                 converter: (store) => store.state.count.toString(),
@@ -46,7 +46,7 @@ class LOFlutterReduxPage extends StatelessWidget {
               TextButton(
                 child: Text("+"),
                 onPressed: () {
-                  store.dispatch(LOReduxCountAction.increment);
+                  store!.dispatch(LOReduxCountAction.increment);
                 },
               ),
               TextButton(

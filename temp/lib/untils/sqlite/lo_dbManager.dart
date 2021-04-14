@@ -16,7 +16,8 @@ class LONeedCreatSQ {
 
   //添加表格
   static String childModelTable = "childModel";
-  static String childModelSQ = '''CREATE TABLE IF NOT EXISTS $childModelTable (
+  static String childModelSQ =
+      '''CREATE TABLE IF NOT EXISTS $childModelTable (
     childString TEXT, 
     childInt INTEGER)
     ''';
@@ -28,9 +29,9 @@ class LOSqliteManager {
   //数据版本号
   static const _DB_VERSION = 1;
 
-  static LOSqliteManager _singleton;
+  static LOSqliteManager? _singleton;
   static Lock _lock = Lock();
-  static Database _database;
+  static Database? _database;
 
   static Future<LOSqliteManager> getInstance() async {
     if (_singleton == null) {
@@ -44,7 +45,7 @@ class LOSqliteManager {
         }
       });
     }
-    return _singleton;
+    return _singleton!;
   }
 
   LOSqliteManager._();
@@ -53,7 +54,7 @@ class LOSqliteManager {
     _database = await initDatabase();
   }
 
-  Future<Database> get database async {
+  Future<Database?> get database async {
     if (_database == null) {
       await _lock.synchronized(
         () async {
@@ -116,7 +117,7 @@ class LOSqliteManager {
 
   //关闭数据库
   close() async {
-    await _database.close();
+    await _database!.close();
     _database = null;
   }
 
@@ -129,85 +130,85 @@ class LOSqliteManager {
 
   //清空表格
   static clearTable(String table) async {
-    await _database.execute('DELETE FROM $table');
+    await _database!.execute('DELETE FROM $table');
   }
 
   //删除表格
   static deleteTable(String table) async {
-    await _database.execute('DROP table $table');
+    await _database!.execute('DROP table $table');
   }
 
   //重命名表格
   static renameTable(String oldTable, String newTable) async {
-    await _database.execute('ALTER TABLE $oldTable RENAME TO $newTable');
+    await _database!.execute('ALTER TABLE $oldTable RENAME TO $newTable');
   }
 
   //添加表格字段
   static addFieldToTable(String filed, String filedKind, String table) async {
-    await _database.execute('ALTER TABLE $table ADD $filed $filedKind');
+    await _database!.execute('ALTER TABLE $table ADD $filed $filedKind');
   }
 
   //删除表格字段
   static deleteFieldInTable(String filed, String table) async {
-    await _database.execute('ALTER TABLE $table DROP COLUMN $filed');
+    await _database!.execute('ALTER TABLE $table DROP COLUMN $filed');
   }
 
   //修改表格字段类型
   static renameKindInTable(String filed, String newKind, String table) async {
-    await _database.execute('ALTER TABLE $table ALTER COLUMN $filed $newKind');
+    await _database!.execute('ALTER TABLE $table ALTER COLUMN $filed $newKind');
   }
 
   //插入数据
   static Future<int> insert(String table, Map<String, dynamic> values,
-      {String nullColumnHack, ConflictAlgorithm conflictAlgorithm}) async {
-    return await _database.insert(table, values,
+      {String? nullColumnHack, ConflictAlgorithm? conflictAlgorithm}) async {
+    return await _database!.insert(table, values,
         nullColumnHack: nullColumnHack, conflictAlgorithm: conflictAlgorithm);
   }
 
   //插入数据2
-  static Future<int> rawInsert(String sql, [List<dynamic> arguments]) async {
-    return await _database.rawInsert(sql, arguments);
+  static Future<int> rawInsert(String sql, [List<dynamic>? arguments]) async {
+    return await _database!.rawInsert(sql, arguments);
   }
 
   //删除数据
   static Future<int> delete(String table,
-      {String where, List<dynamic> whereArgs}) async {
-    return await _database.delete(table, where: where, whereArgs: whereArgs);
+      {String? where, List<dynamic>? whereArgs}) async {
+    return await _database!.delete(table, where: where, whereArgs: whereArgs);
   }
 
   //删除数据2
-  static Future<int> rawdelete(String sql, [List<dynamic> arguments]) async {
-    return await _database.rawDelete(sql, arguments);
+  static Future<int> rawdelete(String sql, [List<dynamic>? arguments]) async {
+    return await _database!.rawDelete(sql, arguments);
   }
 
   //更新数据
   static Future<int> update(String table, Map<String, dynamic> values,
-      {String where,
-      List<dynamic> whereArgs,
-      ConflictAlgorithm conflictAlgorithm}) async {
-    return await _database.update(table, values,
+      {String? where,
+      List<dynamic>? whereArgs,
+      ConflictAlgorithm? conflictAlgorithm}) async {
+    return await _database!.update(table, values,
         where: where,
         whereArgs: whereArgs,
         conflictAlgorithm: conflictAlgorithm);
   }
 
   //更新数据2
-  static Future<int> rawUpdate(String sql, [List<dynamic> arguments]) async {
-    return await _database.rawUpdate(sql, arguments);
+  static Future<int> rawUpdate(String sql, [List<dynamic>? arguments]) async {
+    return await _database!.rawUpdate(sql, arguments);
   }
 
   //查数据
   static Future<List<Map<String, dynamic>>> query(String table,
-      {bool distinct,
-      List<String> columns,
-      String where,
-      List<dynamic> whereArgs,
-      String groupBy,
-      String having,
-      String orderBy,
-      int limit,
-      int offset}) async {
-    return await _database.query(table,
+      {bool? distinct,
+      List<String>? columns,
+      String? where,
+      List<dynamic>? whereArgs,
+      String? groupBy,
+      String? having,
+      String? orderBy,
+      int? limit,
+      int? offset}) async {
+    return await _database!.query(table,
         distinct: distinct,
         columns: columns,
         where: where,
@@ -221,8 +222,8 @@ class LOSqliteManager {
 
   //查数据2
   static Future<List<Map<String, dynamic>>> rawQuery(String sql,
-      [List<dynamic> arguments]) async {
-    return await _database.rawQuery(sql, arguments);
+      [List<dynamic>? arguments]) async {
+    return await _database!.rawQuery(sql, arguments);
   }
 
   // Future<String> generateSQ(String table,

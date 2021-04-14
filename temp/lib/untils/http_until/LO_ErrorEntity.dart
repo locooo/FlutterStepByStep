@@ -2,8 +2,8 @@ import 'package:dio/dio.dart';
 import 'dart:io';
 
 class LOErrorEntity {
-  int status;
-  String message;
+  int? status;
+  String? message;
   LOErrorEntity({this.status, this.message});
 
   // 错误信息
@@ -14,27 +14,27 @@ class LOErrorEntity {
           {
             return LOErrorEntity(status: -1, message: "请求取消");
           }
-          break;
+
         case DioErrorType.connectTimeout:
           {
             return LOErrorEntity(status: 1004, message: "连接超时");
           }
-          break;
+
         case DioErrorType.sendTimeout:
           {
             return LOErrorEntity(status: 1004, message: "请求超时");
           }
-          break;
+
         case DioErrorType.receiveTimeout:
           {
             return LOErrorEntity(status: 1004, message: "响应超时");
           }
-          break;
+
         case DioErrorType.response:
           {
             try {
-              int errCode = error.response.statusCode;
-              String errmessage = error.response.statusMessage;
+              int? errCode = error.response!.statusCode;
+              String? errmessage = error.response!.statusMessage;
               return LOErrorEntity(status: errCode, message: errmessage);
 //          switch (errCode) {
 //            case 400: {
@@ -77,7 +77,7 @@ class LOErrorEntity {
               return LOErrorEntity(status: -1, message: "未知错误");
             }
           }
-          break;
+
         default:
           {
             dynamic e = error.error;

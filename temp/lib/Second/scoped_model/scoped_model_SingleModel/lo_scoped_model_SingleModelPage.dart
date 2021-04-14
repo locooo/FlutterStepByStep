@@ -6,7 +6,7 @@ import 'package:temp/untils/routers/navigatorUntil.dart';
 import 'package:temp/untils/routers/routes.dart';
 
 class LOScopedModelSingleModelPage extends StatelessWidget {
-  LOScopedModelSingleModelPage({Key key}) : super(key: key);
+  LOScopedModelSingleModelPage({Key? key}) : super(key: key);
 
   final LOScopedSingleModel _model = LOScopedSingleModel();
 

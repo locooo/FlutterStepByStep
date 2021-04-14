@@ -7,7 +7,7 @@ import 'lo_flutter_reduxState.dart';
 //  * 需要将状态在App  root初始化
 
 class LOreduxPage1 extends StatelessWidget {
-  const LOreduxPage1({Key key}) : super(key: key);
+  const LOreduxPage1({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

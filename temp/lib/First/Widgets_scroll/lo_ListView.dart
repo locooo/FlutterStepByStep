@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOListViewPage extends StatefulWidget {
-  LOListViewPage({Key key}) : super(key: key);
+  LOListViewPage({Key? key}) : super(key: key);
 
   @override
   _LOListViewPageState createState() => _LOListViewPageState();

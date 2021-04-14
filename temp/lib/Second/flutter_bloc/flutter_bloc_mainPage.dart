@@ -13,7 +13,7 @@ import 'cubit/counterCubit/cubit/counter_cubit_page.dart';
 import 'requestList.dart/listPage.dart';
 
 class LOFlutterBlocMainFaPage extends StatelessWidget {
-  const LOFlutterBlocMainFaPage({Key key}) : super(key: key);
+  const LOFlutterBlocMainFaPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,14 +25,14 @@ class LOFlutterBlocMainFaPage extends StatelessWidget {
 }
 
 class LOFlutterBlocMainPage extends StatefulWidget {
-  LOFlutterBlocMainPage({Key key}) : super(key: key);
+  LOFlutterBlocMainPage({Key? key}) : super(key: key);
 
   @override
   _LOFlutterBlocMainPageState createState() => _LOFlutterBlocMainPageState();
 }
 
 class _LOFlutterBlocMainPageState extends State<LOFlutterBlocMainPage> {
-  CounterBloc _counterBloc;
+  late CounterBloc _counterBloc;
 
   void _incrementCounter() {
     _counterBloc.add(CounterEvent.increment);

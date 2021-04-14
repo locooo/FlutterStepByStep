@@ -4,7 +4,7 @@ import 'package:meta/meta.dart';
 
 @immutable
 class LOReduxCountState {
-  final int _count;
+  final int? _count;
   get count => _count;
   LOReduxCountState(this._count);
   LOReduxCountState.initState() : _count = 0;

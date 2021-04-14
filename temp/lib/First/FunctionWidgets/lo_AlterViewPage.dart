@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:temp/untils/routers/navigatorUntil.dart';
 
 class LOAlterViewPage extends StatefulWidget {
-  LOAlterViewPage({Key key}) : super(key: key);
+  LOAlterViewPage({Key? key}) : super(key: key);
 
   @override
   _LOAlterViewPageState createState() => _LOAlterViewPageState();
@@ -61,7 +61,7 @@ class _LOAlterViewPageState extends State<LOAlterViewPage> {
                   // splashColor: Colors.red,
                   onPressed: () => this
                       ._scaffoldState
-                      .currentState
+                      .currentState!
                       .showBottomSheet((ctx) => showBottom(context)),
                 ),
               ],

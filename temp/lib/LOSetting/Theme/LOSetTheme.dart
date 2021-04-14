@@ -6,7 +6,7 @@ import 'package:temp/LOSetting/Theme/LOThemeUntil.dart';
 import 'package:temp/generated/l10n.dart';
 
 class LOSetTheme extends StatefulWidget {
-  LOSetTheme({Key key}) : super(key: key);
+  LOSetTheme({Key? key}) : super(key: key);
 
   @override
   _LOSetThemeState createState() => _LOSetThemeState();

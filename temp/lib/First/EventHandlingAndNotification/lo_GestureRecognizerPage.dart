@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOGestureRecognizerPage extends StatefulWidget {
-  LOGestureRecognizerPage({Key key}) : super(key: key);
+  LOGestureRecognizerPage({Key? key}) : super(key: key);
 
   @override
   _LOGestureRecognizerPageState createState() =>

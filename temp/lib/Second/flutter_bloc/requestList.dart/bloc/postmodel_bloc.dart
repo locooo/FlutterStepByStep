@@ -3,7 +3,7 @@ import 'dart:convert';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:rxdart/rxdart.dart';
 import 'package:temp/Second/flutter_bloc/requestList.dart/bloc/postmodel.dart';
@@ -12,7 +12,7 @@ part 'postmodel_state.dart';
 
 class PostmodelBloc extends Bloc<PostmodelEvent, PostmodelState> {
   final http.Client httpClient;
-  PostmodelBloc({@required this.httpClient}) : super(PostmodelInitial());
+  PostmodelBloc({required this.httpClient}) : super(PostmodelInitial());
 
   @override
   Stream<PostmodelState> mapEventToState(
@@ -23,7 +23,7 @@ class PostmodelBloc extends Bloc<PostmodelEvent, PostmodelState> {
     // }else if(event is PostModelFetched){
 
     // }
-    final currentState = state;
+    final PostmodelState currentState = state;
     if (event is PostModelFetchedEvent && !_hasReachedMax(currentState)) {
       try {
         if (currentState is PostmodelInitial) {
@@ -32,11 +32,11 @@ class PostmodelBloc extends Bloc<PostmodelEvent, PostmodelState> {
           return;
         }
         if (currentState is PostmodelSuccessState) {
-          final posts = await _fetchPosts(currentState.postModels.length, 20);
+          final posts = await _fetchPosts(currentState.postModels!.length, 20);
           yield posts.isEmpty
               ? currentState.copyWith(hasReachedMax: true)
               : PostmodelSuccessState(
-                  postModels: currentState.postModels + posts,
+                  postModels: currentState.postModels! + posts,
                   hasReachedMax: false,
                 );
         }
@@ -47,7 +47,7 @@ class PostmodelBloc extends Bloc<PostmodelEvent, PostmodelState> {
   }
 
   bool _hasReachedMax(PostmodelState state) {
-    return ((state is PostmodelSuccessState) && state.hasReachedMax);
+    return ((state is PostmodelSuccessState) && state.hasReachedMax!);
   }
 
   Future<List<LOPostModel>> _fetchPosts(int startIndex, int limit) async {

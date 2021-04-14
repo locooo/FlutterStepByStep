@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOPaddingPage extends StatefulWidget {
-  LOPaddingPage({Key key}) : super(key: key);
+  LOPaddingPage({Key? key}) : super(key: key);
 
   @override
   _LOPaddingPageState createState() => _LOPaddingPageState();

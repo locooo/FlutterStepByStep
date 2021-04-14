@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:temp/untils/sqlite/lo_dbManager.dart';
 
 class LOSqflitePage extends StatefulWidget {
-  LOSqflitePage({Key key}) : super(key: key);
+  LOSqflitePage({Key? key}) : super(key: key);
 
   @override
   _LOSqflitePageState createState() => _LOSqflitePageState();

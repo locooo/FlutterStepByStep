@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOStreamContollerPage extends StatefulWidget {
-  LOStreamContollerPage({Key key}) : super(key: key);
+  LOStreamContollerPage({Key? key}) : super(key: key);
 
   @override
   _LOStreamContollerPageState createState() => _LOStreamContollerPageState();
@@ -13,11 +13,11 @@ class LOStreamContollerPage extends StatefulWidget {
 class _LOStreamContollerPageState extends State<LOStreamContollerPage> {
   var index = 0;
   //创建StreamController
-  var streamController;
+  late var streamController;
   // 获取StreamSink用于发射事件
-  StreamSink<String> get streamSink => streamController.sink;
+  StreamSink<String>? get streamSink => streamController.sink;
   // 获取Stream用于监听
-  Stream<String> get streamData => streamController.stream;
+  Stream<String>? get streamData => streamController.stream;
 
   ///事件订阅对象
   // StreamSubscription _dataSubscription;
@@ -25,7 +25,7 @@ class _LOStreamContollerPageState extends State<LOStreamContollerPage> {
   void onFloatActionButtonPress() {
     //发射一个事件.
     index++;
-    streamSink.add(index.toString());
+    streamSink!.add(index.toString());
   }
 
   @override
@@ -41,7 +41,7 @@ class _LOStreamContollerPageState extends State<LOStreamContollerPage> {
     //   ///do change
     // });
     //发射一个事件.
-    streamSink.add("0");
+    streamSink!.add("0");
   }
 
   @override
@@ -72,7 +72,7 @@ class _LOStreamContollerPageState extends State<LOStreamContollerPage> {
               TextButton(
                 child: Text("点我"),
                 onPressed: () {
-                  streamSink.add("10");
+                  streamSink!.add("10");
                 },
               ),
             ],

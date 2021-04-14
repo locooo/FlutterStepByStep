@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOButtonPage extends StatefulWidget {
-  LOButtonPage({Key key}) : super(key: key);
+  LOButtonPage({Key? key}) : super(key: key);
 
   @override
   _LOButtonPageState createState() => _LOButtonPageState();
 }
 
 class _LOButtonPageState extends State<LOButtonPage> {
-  var _dropValue = '语文';
+  String? _dropValue = '语文';
   List<bool> _selecteds = [false, false, true];
   @override
   Widget build(BuildContext context) {
@@ -110,7 +110,7 @@ class _LOButtonPageState extends State<LOButtonPage> {
                   DropdownMenuItem(child: Text('数学'), value: '数学'),
                   DropdownMenuItem(child: Text('英语'), value: '英语'),
                 ],
-                onChanged: (value) {
+                onChanged: (dynamic value) {
                   setState(() {
                     _dropValue = value;
                   });

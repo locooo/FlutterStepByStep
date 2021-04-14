@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOScaleAnimationPage extends StatefulWidget {
-  LOScaleAnimationPage({Key key}) : super(key: key);
+  LOScaleAnimationPage({Key? key}) : super(key: key);
 
   @override
   _LOScaleAnimationPageState createState() => _LOScaleAnimationPageState();
@@ -11,8 +11,8 @@ class LOScaleAnimationPage extends StatefulWidget {
 //需要继承TickerProvider，如果有多个AnimationController，则应该使用TickerProviderStateMixin。
 class _LOScaleAnimationPageState extends State<LOScaleAnimationPage>
     with SingleTickerProviderStateMixin {
-  Animation<double> animation;
-  AnimationController controller;
+  late Animation<double> animation;
+  late AnimationController controller;
 
   @override
   void initState() {

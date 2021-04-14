@@ -6,7 +6,7 @@ import 'package:temp/untils/routers/navigatorUntil.dart';
 import 'package:temp/untils/routers/routes.dart';
 
 class LOProviderPage extends StatelessWidget {
-  const LOProviderPage({Key key}) : super(key: key);
+  const LOProviderPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

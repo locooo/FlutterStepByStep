@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LOHeroPage extends StatefulWidget {
-  LOHeroPage({Key key}) : super(key: key);
+  LOHeroPage({Key? key}) : super(key: key);
 
   @override
   _LOHeroPageState createState() => _LOHeroPageState();
@@ -33,7 +33,7 @@ class _LOHeroPageState extends State<LOHeroPage> {
                 (BuildContext context, Animation animation,
                     Animation secondaryAnimation) {
               return new FadeTransition(
-                opacity: animation,
+                opacity: animation as Animation<double>,
                 child: Scaffold(
                   appBar: AppBar(
                     title: Text("原图"),

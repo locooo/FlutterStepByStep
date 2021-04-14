@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOIndicator extends StatefulWidget {
-  LOIndicator({Key key}) : super(key: key);
+  LOIndicator({Key? key}) : super(key: key);
 
   @override
   _LOIndicatorState createState() => _LOIndicatorState();
 }
 
 class _LOIndicatorState extends State<LOIndicator> {
-  int _radioVal = 3;
+  int? _radioVal = 3;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,7 +57,7 @@ class _LOIndicatorState extends State<LOIndicator> {
                   .map((int index) => Radio<int>(
                         value: index,
                         groupValue: this._radioVal,
-                        onChanged: (int value) {
+                        onChanged: (int? value) {
                           setState(() => this._radioVal = value);
                         },
                       ))

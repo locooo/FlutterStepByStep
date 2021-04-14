@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOFutureBuilderPage extends StatefulWidget {
-  LOFutureBuilderPage({Key key}) : super(key: key);
+  LOFutureBuilderPage({Key? key}) : super(key: key);
 
   @override
   _LOFutureBuilderPageState createState() => _LOFutureBuilderPageState();
@@ -32,15 +32,14 @@ class _LOFutureBuilderPageState extends State<LOFutureBuilderPage> {
                 case ConnectionState.none:
                   //当前没有异步任务，比如[FutureBuilder]的[future]为null时
                   return Text("未开始");
-                  break;
+
                 case ConnectionState.waiting:
                   //加载中
                   return Text("加载中");
-                  break;
+
                 case ConnectionState.active:
                   //FutureBuilder没有该状态
                   return Text("active");
-                  break;
 
                 default:
                   //异步任务已经终止

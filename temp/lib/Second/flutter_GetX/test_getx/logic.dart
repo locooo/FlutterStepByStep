@@ -8,12 +8,12 @@ class TestGetxLogic extends GetxController {
 
   ///自增
   void getXincrease() {
-    ++state.getxInt;
+    state.getxInt = state.getxInt! + 1;
   }
 
   ///自减
   void getXdecrease() {
-    state.getxInt--;
+    state.getxInt = state.getxInt! - 1;
   }
 
   @override

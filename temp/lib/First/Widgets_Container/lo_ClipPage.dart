@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOClipPage extends StatefulWidget {
-  LOClipPage({Key key}) : super(key: key);
+  LOClipPage({Key? key}) : super(key: key);
 
   @override
   _LOClipPageState createState() => _LOClipPageState();

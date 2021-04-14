@@ -6,7 +6,7 @@ import 'package:temp/LOSetting/Language/LOLanguageUntil.dart';
 import 'package:temp/generated/l10n.dart';
 
 class LOSetLanguage extends StatefulWidget {
-  LOSetLanguage({Key key}) : super(key: key);
+  LOSetLanguage({Key? key}) : super(key: key);
 
   @override
   _LOSetLanguageState createState() => _LOSetLanguageState();

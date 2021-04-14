@@ -6,7 +6,7 @@ import 'package:temp/untils/routers/navigatorUntil.dart';
 import 'package:temp/untils/routers/routes.dart';
 
 class LOThirdPage extends StatefulWidget {
-  LOThirdPage({Key key}) : super(key: key);
+  LOThirdPage({Key? key}) : super(key: key);
 
   @override
   _LOThirdPageState createState() => _LOThirdPageState();

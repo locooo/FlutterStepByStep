@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class LOStackAndPositionedPage extends StatefulWidget {
-  LOStackAndPositionedPage({Key key}) : super(key: key);
+  LOStackAndPositionedPage({Key? key}) : super(key: key);
 
   @override
   _LOStackAndPositionedPageState createState() =>

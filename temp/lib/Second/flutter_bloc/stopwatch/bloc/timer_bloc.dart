@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter/widgets.dart';
+// import 'package:flutter/widgets.dart';
 
 import '../ticket.dart';
 
@@ -11,11 +11,10 @@ part 'timer_state.dart';
 
 class TimerBloc extends Bloc<TimerEvent, TimerState> {
   final Ticker _ticker;
-  StreamSubscription<int> _tickerSubscription;
+  StreamSubscription<int>? _tickerSubscription;
   static const int _duration = 59;
-  TimerBloc({@required Ticker ticker})
-      : assert(ticker != null),
-        _ticker = ticker,
+  TimerBloc({required Ticker ticker})
+      : _ticker = ticker,
         super(TimerInitial(_duration));
 
   @override
