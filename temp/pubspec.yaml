@@ -50,7 +50,7 @@ dependencies:
   #
   #权限授权请求 https://github.com/Baseflow/flutter-permission-handler
   #状态管理
-  scoped_model: ^1.1.0
+  scoped_model: ^2.0.0-nullsafety.0
   #状态管理
   redux: ^5.0.0
   flutter_redux: ^0.8.2
@@ -79,7 +79,7 @@ dependencies:
   #屏幕适配
   flutter_screenutil: ^5.0.0
   #UI组件库
-  getwidget: ^1.2.4
+  getwidget: ^2.0.1-nullsafety.4
   #打印工具
   logger: ^1.0.0
   #一台设备上查看不同分辨率设备上UI的效果工具
