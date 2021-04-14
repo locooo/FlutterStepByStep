@@ -1,9 +1,11 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/gestures.dart';
 
 ///日志拦截器
 class LOLogInterceptor extends Interceptor {
   @override
-  Future onRequest(RequestOptions options) async {
+  Future onRequest(
+      RequestOptions options, RequestInterceptorHandler handler) async {
     //// 请求发送前处理
     String requestStr = "\n==================== REQUEST ====================\n"
         "- URL:\n${options.baseUrl + options.path}\n";
@@ -27,11 +29,11 @@ class LOLogInterceptor extends Interceptor {
   }
 
   @override
-  Future onError(DioError err) async {
+  Future onError(DioError err, ErrorInterceptorHandler handler) async {
     // 当请求失败时做一些预处理
     String errorStr = "\n==================== RESPONSE ====================\n"
-        "- URL:\n${err.request.baseUrl + err.request.path}\n"
-        "- METHOD: ${err.request.method}\n";
+        "- URL:\n${err.requestOptions.baseUrl + err.requestOptions.path}\n"
+        "- METHOD: ${err.requestOptions.method}\n";
 
     errorStr +=
         "- HEADER:\n${err.response.headers.map.mapToStructureString()}\n";
@@ -43,15 +45,17 @@ class LOLogInterceptor extends Interceptor {
       errorStr += "- MSG: ${err.message}\n";
     }
     print(errorStr);
+    handler.next(err);
     return err;
   }
 
   @override
-  Future onResponse(Response response) async {
+  Future onResponse(
+      Response response, ResponseInterceptorHandler handler) async {
     // 在返回响应数据之前做一些预处理
     String responseStr =
         "\n==================== RESPONSE ====================\n"
-        "- URL:\n${response.request.uri}\n";
+        "- URL:\n${response.requestOptions.uri}\n";
     responseStr += "- HEADER:\n{";
     response.headers.forEach(
         (key, list) => responseStr += "\n  " + "\"$key\" : \"$list\",");

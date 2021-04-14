@@ -28,17 +28,24 @@ class LOHttpManager {
       // }
 
       _dio.interceptors.add(
-        InterceptorsWrapper(
-          onRequest: (RequestOptions option) {
-            return option;
-          },
-          onResponse: (Response respon) {
-            return respon;
-          },
-          onError: (DioError error) {
-            return error;
-          },
-        ),
+        InterceptorsWrapper(onRequest: (options, handler) {
+          // Do something before request is sent
+          return handler.next(options); //continue
+          // If you want to resolve the request with some custom data，
+          // you can resolve a `Response` object eg: return `dio.resolve(response)`.
+          // If you want to reject the request with a error message,
+          // you can reject a `DioError` object eg: return `dio.reject(dioError)`
+        }, onResponse: (response, handler) {
+          // Do something with response data
+          return handler.next(response); // continue
+          // If you want to reject the request with a error message,
+          // you can reject a `DioError` object eg: return `dio.reject(dioError)`
+        }, onError: (DioError e, handler) {
+          // Do something with response error
+          return handler.next(e); //continue
+          // If you want to resolve the request with some custom data，
+          // you can resolve a `Response` object eg: return `dio.resolve(response)`.
+        }),
       );
     }
   }

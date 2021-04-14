@@ -10,27 +10,27 @@ class LOErrorEntity {
   static LOErrorEntity createErrorEntity(dynamic error) {
     if (error is DioError) {
       switch (error.type) {
-        case DioErrorType.CANCEL:
+        case DioErrorType.cancel:
           {
             return LOErrorEntity(status: -1, message: "请求取消");
           }
           break;
-        case DioErrorType.CONNECT_TIMEOUT:
+        case DioErrorType.connectTimeout:
           {
             return LOErrorEntity(status: 1004, message: "连接超时");
           }
           break;
-        case DioErrorType.SEND_TIMEOUT:
+        case DioErrorType.sendTimeout:
           {
             return LOErrorEntity(status: 1004, message: "请求超时");
           }
           break;
-        case DioErrorType.RECEIVE_TIMEOUT:
+        case DioErrorType.receiveTimeout:
           {
             return LOErrorEntity(status: 1004, message: "响应超时");
           }
           break;
-        case DioErrorType.RESPONSE:
+        case DioErrorType.response:
           {
             try {
               int errCode = error.response.statusCode;

@@ -221,7 +221,6 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       orientation: Orientation.portrait,
       designSize: Size(360, 690),
-      allowFontScaling: false,
     );
     return Scaffold(
       appBar: AppBar(
