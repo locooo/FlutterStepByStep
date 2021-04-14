@@ -36,6 +36,7 @@ class _LODrawerPageState extends State<LODrawerPage> {
                 },
                 child: Center(
                   child: Text(
+                    //
                     S.of(context).setting,
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.white),
