@@ -66,7 +66,7 @@ class _LOFlutterBlocMainPageState extends State<LOFlutterBlocMainPage> {
                 builder: (context, state) {
                   return Text(
                     '$state',
-                    style: Theme.of(context).textTheme.headline4,
+                    style: Theme.of(context).textTheme.bodySmall,
                   );
                 },
               ),

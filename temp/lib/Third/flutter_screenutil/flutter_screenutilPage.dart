@@ -22,12 +22,12 @@ class _LOScreenUntilPageState extends State<LOScreenUntilPage> {
     ); //Status bar height , Notch will be higher Unit px
     print('实际宽度的dp与设计稿px的比例:${ScreenUtil().scaleWidth}');
     print('实际高度的dp与设计稿px的比例:${ScreenUtil().scaleHeight}');
-    print(
-      '宽度和字体相对于设计稿放大的比例:${ScreenUtil().scaleWidth * ScreenUtil().pixelRatio}',
-    );
-    print(
-      '高度相对于设计稿放大的比例:${ScreenUtil().scaleHeight * ScreenUtil().pixelRatio}',
-    );
+    // print(
+    //   '宽度和字体相对于设计稿放大的比例:${ScreenUtil().scaleWidth * ScreenUtil().pixelRatio}',
+    // );
+    // print(
+    //   '高度相对于设计稿放大的比例:${ScreenUtil().scaleHeight * ScreenUtil().pixelRatio}',
+    // );
     print('系统的字体缩放比例:${ScreenUtil().textScaleFactor}');
 
     // print('屏幕宽度的0.5:${0.5.sw}');

@@ -49,7 +49,7 @@ class _LOgetwidgetPageState extends State<LOgetwidgetPage> {
             ),
             GFCarousel(
               autoPlay: true,
-              pagination: true,
+              // pagination: true,
               activeIndicator: Colors.pink,
               viewportFraction: 1.0,
               autoPlayAnimationDuration: Duration(milliseconds: 80),

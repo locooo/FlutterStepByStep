@@ -214,13 +214,19 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    // ScreenUtil.init(
+    //   BoxConstraints(
+    //     maxWidth: MediaQuery.of(context).size.width,
+    //     maxHeight: MediaQuery.of(context).size.height,
+    //   ),
+    //   orientation: Orientation.portrait,
+    //   designSize: Size(360, 690),
+    // );
     ScreenUtil.init(
-      BoxConstraints(
-        maxWidth: MediaQuery.of(context).size.width,
-        maxHeight: MediaQuery.of(context).size.height,
-      ),
-      orientation: Orientation.portrait,
+      context, // 这里传入 BuildContext
       designSize: Size(360, 690),
+      minTextAdapt: true,
+      // orientation: Orientation.portrait,
     );
     return Scaffold(
       appBar: AppBar(
