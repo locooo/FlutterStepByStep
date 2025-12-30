@@ -1,0 +1,15 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/locoo/Desktop/个人/FlutterStepByStep/FlutterFrameworks/Profile/iphoneos/Profile-iphoneos/connectivity/connectivity.framework/connectivity"
+relocations:
+  - { offset: 0x39D7F, size: 0x8, addend: 0x0, symName: _connectivityVersionString, symObjAddr: 0x0, symBinAddr: 0x46A0, symSize: 0x0 }
+  - { offset: 0x39DB5, size: 0x8, addend: 0x0, symName: _connectivityVersionNumber, symObjAddr: 0x30, symBinAddr: 0x46D0, symSize: 0x0 }
+  - { offset: 0x39DF2, size: 0x8, addend: 0x0, symName: '+[FLTConnectivityPlugin registerWithRegistrar:]', symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x10C }
+  - { offset: 0x39E67, size: 0x8, addend: 0x0, symName: '+[FLTConnectivityPlugin registerWithRegistrar:]', symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x10C }
+  - { offset: 0x39ED6, size: 0x8, addend: 0x0, symName: '-[FLTConnectivityPlugin statusFromReachability:]', symObjAddr: 0x10C, symBinAddr: 0x410C, symSize: 0x40 }
+  - { offset: 0x39F29, size: 0x8, addend: 0x0, symName: '-[FLTConnectivityPlugin handleMethodCall:result:]', symObjAddr: 0x14C, symBinAddr: 0x414C, symSize: 0xD4 }
+  - { offset: 0x39FAB, size: 0x8, addend: 0x0, symName: '-[FLTConnectivityPlugin onReachabilityDidChange:]', symObjAddr: 0x220, symBinAddr: 0x4220, symSize: 0x70 }
+  - { offset: 0x3A019, size: 0x8, addend: 0x0, symName: '-[FLTConnectivityPlugin onListenWithArguments:eventSink:]', symObjAddr: 0x290, symBinAddr: 0x4290, symSize: 0xA4 }
+  - { offset: 0x3A06C, size: 0x8, addend: 0x0, symName: '-[FLTConnectivityPlugin onCancelWithArguments:]', symObjAddr: 0x334, symBinAddr: 0x4334, symSize: 0x6C }
+  - { offset: 0x3A0AF, size: 0x8, addend: 0x0, symName: '-[FLTConnectivityPlugin .cxx_destruct]', symObjAddr: 0x3A0, symBinAddr: 0x43A0, symSize: 0x30 }
+...

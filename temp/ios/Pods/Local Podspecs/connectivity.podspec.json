@@ -18,12 +18,8 @@
   "source_files": "Classes/**/*",
   "public_header_files": "Classes/**/*.h",
   "dependencies": {
-    "Flutter": [
-
-    ],
-    "Reachability": [
-
-    ]
+    "Flutter": [],
+    "Reachability": []
   },
   "platforms": {
     "ios": "8.0"

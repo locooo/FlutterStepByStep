@@ -28,10 +28,12 @@ class _LOOpacityPageState extends State<LOOpacityPage> {
           ),
         ),
         body: TabBarView(
+         
           children: [
             Column(
               children: [
                 Opacity(
+                  
                   opacity: this.isShow ? 1.0 : 0.0,
                   alwaysIncludeSemantics: true,
                   child: Container(

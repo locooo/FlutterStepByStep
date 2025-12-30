@@ -7,7 +7,7 @@ import 'logic.dart';
 import 'state.dart';
 
 class TestGetxPage extends StatelessWidget {
-  final TestGetxLogic logic = Get.put(TestGetxLogic());
+  final TestGetxLogic logic = Get.put(TestGetxLogic(), permanent: true);
   final TestGetxState state = Get.find<TestGetxLogic>().state;
   final myCount = 0.obs;
   @override

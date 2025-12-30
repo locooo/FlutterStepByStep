@@ -21,7 +21,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 2.0.0-nullsafety.0
 # Dart 运行环境区间
 environment:
-  sdk: "3.5.1"
+  sdk: ">=3.6.1 <4.0.0"
   # 限制flutterSDK版本
   # flutter: "1.22.0"
 # Flutter 依赖库
@@ -80,7 +80,7 @@ dependencies:
   #屏幕适配
   flutter_screenutil: ^5.0.0
   #UI组件库
-  getwidget: ^4.0.0
+  getwidget: ^7.0.0
   #打印工具
   logger: ^1.0.0
   #一台设备上查看不同分辨率设备上UI的效果工具
